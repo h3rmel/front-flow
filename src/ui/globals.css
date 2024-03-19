@@ -11,6 +11,52 @@
 @tailwind utilities;
 
 @layer base {
+
+  /* 
+    Kamome theme
+  */
+  :root {
+    --kamome-green-50: #eafff7;
+    --kamome-green-100: #cdfee9;
+    --kamome-green-200: #a0fad8;
+    --kamome-green-300: #63f2c5;
+    --kamome-green-400: #25e2ac;
+    --kamome-green-500: #00c896;
+    --kamome-green-600: #00a47b;
+    --kamome-green-700: #008367;
+    --kamome-green-800: #006752;
+    --kamome-green-900: #005545;
+    --kamome-green-950: #003028;
+
+    --kamome-gray-50: #f6f6f6;
+    --kamome-gray-100: #e7e7e7;
+    --kamome-gray-200: #d1d1d1;
+    --kamome-gray-300: #b0b0b0;
+    --kamome-gray-400: #888888;
+    --kamome-gray-500: #6d6d6d;
+    --kamome-gray-600: #5d5d5d;
+    --kamome-gray-700: #4f4f4f;
+    --kamome-gray-800: #454545;
+    --kamome-gray-900: #3d3d3d;
+    --kamome-gray-950: #0d0d0d;
+
+    --background: var(--kamome-gray-50);
+    --foreground: var(--kamome-gray-950);
+
+    --border: var(--kamome-gray-100);
+    --input: var(--kamome-gray-100);
+    --input: var(--kamome-gray-200);
+  }
+
+  .dark {
+    --background: var(--kamome-gray-950);
+    --foreground: var(--kamome-gray-50);
+
+    --border: var(--kamome-gray-900);
+    --input: var(--kamome-gray-900);
+    --input: var(--kamome-gray-800);
+  }
+
   * {
     @apply box-border border-border scroll-smooth;
   }

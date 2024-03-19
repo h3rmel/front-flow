@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    /* --background: 0 0% 100%; */
+    /* --foreground: 224 71.4% 4.1%; */
 
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -30,16 +30,16 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
+    /* --border: 220 13% 91%; */
+    /* --input: 220 13% 91%; */
+    /* --ring: 224 71.4% 4.1%; */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
+    /* --background: 224 71.4% 4.1%; */
+    /* --foreground: 210 20% 98%; */
 
     --card: 224 71.4% 4.1%;
     --card-foreground: 210 20% 98%;
@@ -62,8 +62,8 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 20% 98%;
 
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
+    /* --border: 215 27.9% 16.9%; */
+    /* --input: 215 27.9% 16.9%; */
+    /* --ring: 216 12.2% 83.9%; */
   }
 }

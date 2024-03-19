@@ -31,11 +31,9 @@ const config: Config = {
        * @see {@url https://ui.shadcn.com/}
        */
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -61,9 +59,41 @@ const config: Config = {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "var(--background)",
+          foreground: "var(--foreground)",
         },
+        /**
+         * Kamome
+         * @see {@url https://www.figma.com/community/file/1349129545290357189/kamome-brand}
+         */
+        "kamome-green": {
+          50: "var(--kamome-green-50)",
+          100: "var(--kamome-green-100)",
+          200: "var(--kamome-green-200)",
+          300: "var(--kamome-green-300)",
+          400: "var(--kamome-green-400)",
+          500: "var(--kamome-green-500)",
+          600: "var(--kamome-green-600)",
+          700: "var(--kamome-green-700)",
+          800: "var(--kamome-green-800)",
+          900: "var(--kamome-green-900)",
+          950: "var(--kamome-green-950)",
+        },
+        "kamome-gray": {
+          50: "var(--kamome-gray-50)",
+          100: "var(--kamome-gray-100)",
+          200: "var(--kamome-gray-200)",
+          300: "var(--kamome-gray-300)",
+          400: "var(--kamome-gray-400)",
+          500: "var(--kamome-gray-500)",
+          600: "var(--kamome-gray-600)",
+          700: "var(--kamome-gray-700)",
+          800: "var(--kamome-gray-800)",
+          900: "var(--kamome-gray-900)",
+          950: "var(--kamome-gray-950)",
+        },
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
       borderRadius: {
         lg: "var(--radius)",
