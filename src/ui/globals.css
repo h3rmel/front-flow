@@ -16,41 +16,49 @@
     Kamome theme
   */
   :root {
-    --kamome-green-50: #eafff7;
-    --kamome-green-100: #cdfee9;
-    --kamome-green-200: #a0fad8;
-    --kamome-green-300: #63f2c5;
-    --kamome-green-400: #25e2ac;
-    --kamome-green-500: #00c896;
-    --kamome-green-600: #00a47b;
-    --kamome-green-700: #008367;
-    --kamome-green-800: #006752;
-    --kamome-green-900: #005545;
-    --kamome-green-950: #003028;
+    --kamome-green-50: 157 100% 96%;
+    --kamome-green-100: 154 96% 90%;
+    --kamome-green-200: 157 90% 80%;
+    --kamome-green-300: 161 85% 67%;
+    --kamome-green-400: 163 77% 52%;
+    --kamome-green-500: 165 100% 39;
+    --kamome-green-600: 165 100% 32;
+    --kamome-green-700: 167 100% 26;
+    --kamome-green-800: 168 100% 20;
+    --kamome-green-900: 169 100% 17;
+    --kamome-green-950: 170 100% 9;
 
-    --kamome-gray-50: #f6f6f6;
-    --kamome-gray-100: #e7e7e7;
-    --kamome-gray-200: #d1d1d1;
-    --kamome-gray-300: #b0b0b0;
-    --kamome-gray-400: #888888;
-    --kamome-gray-500: #6d6d6d;
-    --kamome-gray-600: #5d5d5d;
-    --kamome-gray-700: #4f4f4f;
-    --kamome-gray-800: #454545;
-    --kamome-gray-900: #3d3d3d;
-    --kamome-gray-950: #0d0d0d;
+    --kamome-gray-50: 0 0% 96;
+    --kamome-gray-100: 0 0% 91;
+    --kamome-gray-200: 0 0% 82;
+    --kamome-gray-300: 0 0% 69;
+    --kamome-gray-400: 0 0% 53;
+    --kamome-gray-500: 0 0% 43;
+    --kamome-gray-600: 0 0% 36;
+    --kamome-gray-700: 0 0% 31;
+    --kamome-gray-800: 0 0% 27;
+    --kamome-gray-900: 0 0% 24;
+    --kamome-gray-950: 0 0% 5;
 
     --background: var(--kamome-gray-50);
     --foreground: var(--kamome-gray-950);
 
-    --border: var(--kamome-gray-100);
+    --accent: var(--kamome-gray-100);
+    --accent-foreground: var(--kamome-gray-900);
+
+    --border: var(--kamome-gray-200);
     --input: var(--kamome-gray-100);
     --input: var(--kamome-gray-200);
+
+    --radius: 1rem;
   }
 
   .dark {
     --background: var(--kamome-gray-950);
     --foreground: var(--kamome-gray-50);
+
+    --accent: var(--kamome-gray-900);
+    --accent-foreground: var(--kamome-gray-100);
 
     --border: var(--kamome-gray-900);
     --input: var(--kamome-gray-900);
@@ -58,10 +66,24 @@
   }
 
   * {
-    @apply box-border border-border scroll-smooth;
+    @apply box-border border-border scroll-smooth font-space-grotesk;
   }
 
   body {
-    @apply m-0 p-0 w-full min-h-screen bg-background text-foreground font-space-grotesk;
+    @apply m-0 p-0 w-full min-h-screen bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sora;
+  }
+
+  code,
+  kbd {
+    @apply font-ibm-plex-mono;
   }
 }

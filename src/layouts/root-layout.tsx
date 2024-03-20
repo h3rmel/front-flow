@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 
-import { Navbar } from "@/ui/components/layout/navbar";
-import { Footer } from "@/ui/components/layout/footer";
+import { Footer, Navbar } from "@/ui/components/layout";
 
 interface RootLayoutProps {
   children: ReactNode;
