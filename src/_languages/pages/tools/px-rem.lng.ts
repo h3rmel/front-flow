@@ -11,12 +11,20 @@ export const PX_REM_LANGUAGES: LanguageList = {
     'pt-BR': 'Classe Tailwind',
     'en-US': 'Tailwind class',
   },
-  copy_tailwind_class: {
-    'pt-BR': 'Copiar',
-    'en-US': 'Copy',
-  },
   base_value: {
     'pt-BR': 'Valor Base',
     'en-US': 'Base value',
+  },
+  copy_tailwind: {
+    'pt-BR': 'Copiar Classe Tailwind',
+    'en-US': 'Copy Tailwind class',
+  },
+  copy_px: {
+    'pt-BR': 'Copiar Valor em Pixels',
+    'en-US': 'Copy value in pixels',
+  },
+  copy_rem: {
+    'pt-BR': 'Copiar Valor em REM',
+    'en-US': 'Copy value in rem',
   },
 };

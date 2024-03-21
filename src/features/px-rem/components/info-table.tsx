@@ -3,9 +3,13 @@
 import { Copy } from '@phosphor-icons/react';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
-import { Button } from '@/ui/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from '@/ui/components/ui/dropdown-menu';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/ui/components/ui/tooltip';
 
 import { PX_REM_LANGUAGES } from '@/_languages';
 
@@ -34,7 +38,7 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
    * @param {string} value - the string to be copied to the clipboard
    * @return {void}
    */
-  function copyTailwindClass(value: string) {
+  function copySpacingValue(value: string) {
     navigator.clipboard.writeText(value);
   }
 
@@ -55,14 +59,22 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
             <TableCell>{rem}</TableCell>
             <TableCell className="w-full inline-flex items-center justify-between gap-2">
               {tailwind}
-              <Tooltip>
-                <TooltipTrigger>
-                  <Button size="icon-sm" className="rounded-[8px]" onClick={() => copyTailwindClass(tailwind)}>
-                    <Copy size={16} />
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>{translate('copy_tailwind_class', PX_REM_LANGUAGES)}</TooltipContent>
-              </Tooltip>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="h-6 w-6 grid place-items-center">
+                  <Copy size={16} />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem onClick={() => copySpacingValue(`gap: ${px}`)}>
+                    {translate('copy_px', PX_REM_LANGUAGES)}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => copySpacingValue(`gap: ${rem}`)}>
+                    {translate('copy_rem', PX_REM_LANGUAGES)}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => copySpacingValue(tailwind)}>
+                    {translate('copy_tailwind', PX_REM_LANGUAGES)}
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </TableCell>
           </TableRow>
         ))}

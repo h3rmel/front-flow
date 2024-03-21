@@ -38,25 +38,22 @@ export function CardForm(): JSX.Element {
 
   const { translate } = useLanguage();
 
-  const values = form.getValues();
-
   /**
-   * A function to handle changes in input fields.
+   * Handles the change event for input elements.
    *
-   * @param {ChangeEvent<HTMLInputElement>} event - the event object containing the input element
+   * @param {ChangeEvent<HTMLInputElement>} event - the change event object
    * @return {void}
    */
-  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+  function handleChange(event: ChangeEvent<HTMLInputElement>): void {
     const { name, value } = event.target;
-    const numValue = Number(value);
 
     if (name === 'px') {
-      form.setValue('rem', numValue / values.base_value);
+      form.setValue('rem', Number(value) / form.getValues().base_value);
     } else if (name === 'rem') {
-      form.setValue('px', numValue * values.base_value);
+      form.setValue('px', Number(value) * form.getValues().base_value);
     } else if (name === 'base_value') {
-      form.setValue('px', numValue / values.rem);
-      form.setValue('rem', numValue / values.px);
+      form.setValue('px', Number(value));
+      form.setValue('rem', Number(value) / form.getValues().px);
     }
   }
 
