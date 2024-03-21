@@ -14,25 +14,29 @@ import {
   CardHeader,
   CardTitle,
 } from "@/ui/components/ui/card";
-import { toolsContent } from "@/data/tools";
+import { toolsContent } from "@/_data/tools";
+import { useLanguage } from "@/ui/components/language/language-provider";
+import { HOME_LANGUAGES, TOOLS_LANGUAGES } from "@/_languages";
 
 // #endregion
 
 export function Home() {
+  const { translate } = useLanguage();
+
   return (
     <RootLayout>
       <section className="relative container flex flex-col items-center justify-center gap-12 p-16 border rounded-t-2xl">
         <hgroup className="text-center font-sora">
           <h1 className="text-4xl leading-[48px] mb-1">
-            Ferramentas front-end em um só lugar.
+            {translate("front_tools", HOME_LANGUAGES)}
           </h1>
           <h2 className="text-xl font-light">
-            Desenvolva sem &ldquo;quebrar a cabeça&rdquo; com questões de UI.
+            {translate("rack_your_brain", HOME_LANGUAGES)}
           </h2>
         </hgroup>
         <div className="flex items-center gap-4">
-          <Button>Começar</Button>
-          <Link to="https://github.com/H3rmel/ui-atelier" target="_blank">
+          <Button>{translate("btn_start", HOME_LANGUAGES)}</Button>
+          <Link to="https://github.com/K4mome/atelier" target="_blank">
             <Button variant="secondary">
               <GithubLogo size={20} /> GitHub
             </Button>
@@ -43,60 +47,68 @@ export function Home() {
       <section className="relative container flex flex-col gap-8 p-16 border border-y-0">
         <Card className="mr-auto ml-[20%]">
           <CardHeader>
-            <CardTitle>O que é o Atelier?</CardTitle>
-            <CardDescription>Uma breve explicação...</CardDescription>
+            <CardTitle>
+              {translate("what_is_atelier", HOME_LANGUAGES)}
+            </CardTitle>
+            <CardDescription>
+              {translate("what_is_atelier_description", HOME_LANGUAGES)}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-justify">
-              É um conjunto de ferramentas específicas para front-end visando
-              auxiliar desenvolvedores a criar interfaces com mais facilidade e
-              simplicidade no seu dia a dia.
+              {translate("what_is_atelier_content", HOME_LANGUAGES)}
             </p>
           </CardContent>
         </Card>
         <Card className="ml-auto mr-[20%]">
           <CardHeader>
-            <CardTitle>Como funciona?</CardTitle>
-            <CardDescription>Como usar a plataforma.</CardDescription>
+            <CardTitle>{translate("how_it_works", HOME_LANGUAGES)}</CardTitle>
+            <CardDescription>
+              {translate("how_it_works_description", HOME_LANGUAGES)}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-justify">
-              Para usar a plataforma é simples: Procure a ferramenta que desejar
-              na barra de navegação (aquela do topo da tela) e clique em seu
-              link para utiliza-lá!
+              {translate("how_it_works_content", HOME_LANGUAGES)}
             </p>
           </CardContent>
         </Card>
         <Card className="mr-auto ml-[20%]">
           <CardHeader>
-            <CardTitle>Não achei uma funcionalidade</CardTitle>
-            <CardDescription>O que fazer?</CardDescription>
+            <CardTitle>
+              {translate("dont_find_a_feature", HOME_LANGUAGES)}
+            </CardTitle>
+            <CardDescription>
+              {translate("dont_find_a_feature_description", HOME_LANGUAGES)}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-justify">
-              Se não achar uma funcionalidade que deseja, você pode adiciona-lá
-              através de um <span className="italic">pull request</span> ou
-              apenas requisita-lá.
+              {translate("dont_find_a_feature_content", HOME_LANGUAGES)}
             </p>
           </CardContent>
         </Card>
         <Card className="ml-auto mr-[20%]">
           <CardHeader>
-            <CardTitle>Gostei do projeto</CardTitle>
-            <CardDescription>Como posso contribuir?</CardDescription>
+            <CardTitle>
+              {translate("liked_the_project", HOME_LANGUAGES)}
+            </CardTitle>
+            <CardDescription>
+              {translate("liked_the_project_description", HOME_LANGUAGES)}
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-justify">
-              Você pode contribuir para o projeto adicionando novas
-              funcionalidades ou doando uma quantia de qualquer valor para
-              ajudar a manter essa plataforma no ar.
+              {translate("liked_the_project_content", HOME_LANGUAGES)}
             </p>
           </CardContent>
         </Card>
       </section>
       {/* Tools */}
       <section className="relative container flex flex-col gap-8 p-16 border rounded-b-2xl">
-        <h2 className="text-3xl font-sora text-center">Ferramentas</h2>
+        <h2 className="text-3xl font-sora text-center">
+          {translate("tools", HOME_LANGUAGES)}
+        </h2>
         <div className="flex flex-wrap items-center gap-4">
           {toolsContent.map((tool: IToolSimplified, index: number) => (
             <Link
@@ -104,7 +116,7 @@ export function Home() {
               to={tool.href}
               className={buttonVariants({ variant: "outline" })}
             >
-              {tool.title}
+              {translate(tool.title, TOOLS_LANGUAGES)}
             </Link>
           ))}
         </div>

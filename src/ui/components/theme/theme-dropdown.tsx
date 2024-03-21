@@ -7,7 +7,7 @@ import {
 } from "@/ui/components/ui/dropdown-menu";
 import { useTheme } from "@/ui/components/theme/theme-provider";
 import { useLanguage } from "@/ui/components/language/language-provider";
-import { NAVBAR_LANGUAGES } from "@/languages";
+import { NAVBAR_LANGUAGES } from "@/_languages";
 import { Moon, Sun } from "@phosphor-icons/react";
 
 export function ThemeDropdown() {

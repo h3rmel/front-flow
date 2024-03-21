@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-import { toolsNavigation } from "@/data/tools";
+import { toolsNavigation } from "@/_data/tools";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,16 +12,22 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/ui/components/ui/navigation-menu";
+import { useLanguage } from "../../language/language-provider";
+import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from "@/_languages";
 
 // #endregion
 
 export function NavbarMenu() {
+  const { translate } = useLanguage();
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {/* Components */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Ferramentas</NavigationMenuTrigger>
+          <NavigationMenuTrigger>
+            {translate("tools", NAVBAR_LANGUAGES)}
+          </NavigationMenuTrigger>
           <NavigationMenuContent className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {toolsNavigation.map((toolLink: ITool, index) => (
               <NavigationMenuLink key={index} asChild>
@@ -34,7 +40,7 @@ export function NavbarMenu() {
         <NavigationMenuItem>
           <Link to="/about">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Sobre
+              {translate("about", NAVBAR_LANGUAGES)}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -48,14 +54,18 @@ interface ListMenuItemProps {
 }
 
 export function ListMenuItem({ toolLink }: ListMenuItemProps) {
+  const { translate } = useLanguage();
+
   return (
     <Link
       to={toolLink.href}
       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
     >
-      <h6 className="text-sm font-medium leading-none">{toolLink.title}</h6>
+      <h6 className="text-sm font-medium leading-none">
+        {translate(toolLink.title, TOOLS_LANGUAGES)}
+      </h6>
       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-        {toolLink.description}
+        {translate(toolLink.description, TOOLS_LANGUAGES)}
       </p>
     </Link>
   );

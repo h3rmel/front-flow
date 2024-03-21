@@ -6,7 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/ui/components/ui/dropdown-menu";
 import { useLanguage } from "@/ui/components/language/language-provider";
-import { NAVBAR_LANGUAGES } from "@/languages";
+import { NAVBAR_LANGUAGES } from "@/_languages";
 
 export function LanguageDropdown() {
   const { language, setLanguage, translate } = useLanguage();

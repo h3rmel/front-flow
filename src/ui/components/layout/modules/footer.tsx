@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom";
 
-import { FOOTER_LANGUAGES } from "@/languages";
+import { FOOTER_LANGUAGES } from "@/_languages";
 import { useLanguage } from "@/ui/components/language/language-provider";
 
 // #endregion
