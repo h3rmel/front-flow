@@ -1,25 +1,24 @@
-import { ChangeEvent } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+// #region Imports
 
-import { Card, CardContent } from "@/ui/components/ui/card";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/ui/components/ui/form";
-import { Input } from "@/ui/components/ui/input";
-import { PX_REM_LANGUAGES } from "@/_languages";
-import { useLanguage } from "@/ui/components/language/language-provider";
+import { ChangeEvent } from 'react';
+import { useForm } from 'react-hook-form';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+
+import { PX_REM_LANGUAGES } from '@/_languages';
+
+import { useLanguage } from '@/ui/components/language/language-provider';
+import { Card, CardContent } from '@/ui/components/ui/card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/components/ui/form';
+import { Input } from '@/ui/components/ui/input';
+
+// #endregion
 
 const formSchema = z.object({
-  px: z.number().positive({ message: "O valor deve ser positivo" }),
-  rem: z.number().positive({ message: "O valor deve ser positivo" }),
-  base_value: z.number().positive({ message: "O valor deve ser positivo" }),
+  px: z.number().positive({ message: 'O valor deve ser positivo' }),
+  rem: z.number().positive({ message: 'O valor deve ser positivo' }),
+  base_value: z.number().positive({ message: 'O valor deve ser positivo' }),
 });
 
 export function CardForm() {
@@ -40,15 +39,15 @@ export function CardForm() {
     const numValue = Number(value);
 
     switch (name) {
-      case "px":
-        form.setValue("rem", numValue / values.base_value);
+      case 'px':
+        form.setValue('rem', numValue / values.base_value);
         break;
-      case "rem":
-        form.setValue("px", numValue * values.base_value);
+      case 'rem':
+        form.setValue('px', numValue * values.base_value);
         break;
-      case "base_value":
-        form.setValue("px", numValue / values.rem);
-        form.setValue("rem", numValue / values.px);
+      case 'base_value':
+        form.setValue('px', numValue / values.rem);
+        form.setValue('rem', numValue / values.px);
         break;
     }
   }
@@ -69,7 +68,7 @@ export function CardForm() {
                       <Input
                         type="number"
                         placeholder="16..."
-                        {...form.register("px", {
+                        {...form.register('px', {
                           valueAsNumber: true,
                           onChange(event: ChangeEvent<HTMLInputElement>) {
                             handleChange(event);
@@ -91,7 +90,7 @@ export function CardForm() {
                       <Input
                         type="number"
                         placeholder="16..."
-                        {...form.register("rem", {
+                        {...form.register('rem', {
                           valueAsNumber: true,
                           onChange(event: ChangeEvent<HTMLInputElement>) {
                             handleChange(event);
@@ -109,14 +108,12 @@ export function CardForm() {
               name="base_value"
               render={() => (
                 <FormItem className="flex items-center gap-2 flex-row-reverse">
-                  <FormLabel className="text-nowrap">
-                    {translate("base_value", PX_REM_LANGUAGES)}
-                  </FormLabel>
+                  <FormLabel className="text-nowrap">{translate('base_value', PX_REM_LANGUAGES)}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
                       placeholder="16..."
-                      {...form.register("base_value", {
+                      {...form.register('base_value', {
                         valueAsNumber: true,
                         onChange(event: ChangeEvent<HTMLInputElement>) {
                           handleChange(event);

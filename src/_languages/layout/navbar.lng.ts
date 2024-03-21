@@ -2,42 +2,42 @@ export const NAVBAR_LANGUAGES: LanguageList = {
   /**
    * <ThemeDropdown/> component
    */
-  "toggle-theme": {
-    "pt-BR": "Alternar tema",
-    "en-US": "Toggle theme",
+  'toggle-theme': {
+    'pt-BR': 'Alternar tema',
+    'en-US': 'Toggle theme',
   },
-  "theme-light": {
-    "pt-BR": "Claro",
-    "en-US": "Light",
+  'theme-light': {
+    'pt-BR': 'Claro',
+    'en-US': 'Light',
   },
-  "theme-dark": {
-    "pt-BR": "Escuro",
-    "en-US": "Dark",
+  'theme-dark': {
+    'pt-BR': 'Escuro',
+    'en-US': 'Dark',
   },
-  "theme-system": {
-    "pt-BR": "Sistema",
-    "en-US": "System",
+  'theme-system': {
+    'pt-BR': 'Sistema',
+    'en-US': 'System',
   },
   /**
    * <LanguageDropdown/> component
    */
   portuguese: {
-    "pt-BR": "Português",
-    "en-US": "Portuguese",
+    'pt-BR': 'Português',
+    'en-US': 'Portuguese',
   },
   english: {
-    "pt-BR": "Inglês",
-    "en-US": "English",
+    'pt-BR': 'Inglês',
+    'en-US': 'English',
   },
   /**
    * <NavbarMenu/>
    */
   tools: {
-    "pt-BR": "Ferramentas",
-    "en-US": "Tools",
+    'pt-BR': 'Ferramentas',
+    'en-US': 'Tools',
   },
   about: {
-    "pt-BR": "Sobre",
-    "en-US": "About",
-  }
+    'pt-BR': 'Sobre',
+    'en-US': 'About',
+  },
 };

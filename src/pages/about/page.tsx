@@ -1,4 +1,5 @@
+import { RootLayout } from '@/layouts/root-layout';
+
 export function AboutPage() {
-  console.log('about')
-  return <>about</>;
+  return <RootLayout>about</RootLayout>;
 }

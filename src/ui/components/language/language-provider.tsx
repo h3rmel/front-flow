@@ -1,10 +1,4 @@
-import {
-  ReactNode,
-  createContext,
-  useCallback,
-  useContext,
-  useState,
-} from "react";
+import { ReactNode, createContext, useCallback, useContext, useState } from 'react';
 
 interface LanguagesProviderProps {
   children: ReactNode;
@@ -19,21 +13,20 @@ interface LanguageProviderState {
 }
 
 const initialState: LanguageProviderState = {
-  language: "pt-BR",
+  language: 'pt-BR',
   setLanguage: () => null,
-  translate: () => "",
+  translate: () => '',
 };
 
-const LanguageProviderContext =
-  createContext<LanguageProviderState>(initialState);
+const LanguageProviderContext = createContext<LanguageProviderState>(initialState);
 
 export function LanguageProvider({
   children,
-  defaultLanguage = "pt-BR",
-  storageKey = "atelier-language",
+  defaultLanguage = 'pt-BR',
+  storageKey = 'atelier-language',
 }: LanguagesProviderProps) {
   const [language, setLanguage] = useState<Language>(
-    () => (localStorage.getItem(storageKey) as Language) || defaultLanguage
+    () => (localStorage.getItem(storageKey) as Language) || defaultLanguage,
   );
 
   /**
@@ -45,11 +38,11 @@ export function LanguageProvider({
    */
   const translate = useCallback(
     (key: string, list: LanguageList): string => {
-      if (!language) return list[key]["pt-BR"];
+      if (!language) return list[key]['pt-BR'];
 
       return list[key][language];
     },
-    [language]
+    [language],
   );
 
   const value = {
@@ -61,18 +54,13 @@ export function LanguageProvider({
     translate,
   };
 
-  return (
-    <LanguageProviderContext.Provider value={value}>
-      {children}
-    </LanguageProviderContext.Provider>
-  );
+  return <LanguageProviderContext.Provider value={value}>{children}</LanguageProviderContext.Provider>;
 }
 
 export const useLanguage = () => {
   const context = useContext(LanguageProviderContext);
 
-  if (context === undefined)
-    throw new Error("useLanguage must be used within a LanguageProvider");
+  if (context === undefined) throw new Error('useLanguage must be used within a LanguageProvider');
 
   return context;
 };

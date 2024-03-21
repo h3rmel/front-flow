@@ -1,8 +1,13 @@
-import { createRoot } from "react-dom/client";
-import { App } from "@/app";
+// #region Imports
 
-import "@/ui/globals.css";
+import { createRoot } from 'react-dom/client';
 
-const root = createRoot(document.getElementById("root")!);
+import { App } from '@/app';
+
+import '@/ui/globals.css';
+
+// #endregion
+
+const root = createRoot(document.getElementById('root')!);
 
 root.render(<App />);

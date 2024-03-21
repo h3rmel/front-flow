@@ -1,6 +1,10 @@
-import { ReactNode } from "react";
+// #region Imports
 
-import { Footer, Navbar } from "@/ui/components/layout";
+import { ReactNode } from 'react';
+
+import { Footer, Navbar } from '@/ui/components/layout';
+
+// #endregion
 
 interface RootLayoutProps {
   children: ReactNode;

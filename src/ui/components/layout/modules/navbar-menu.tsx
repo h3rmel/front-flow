@@ -1,9 +1,11 @@
 // #region Imports
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { toolsNavigation } from "@/_data/tools";
-import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from "@/_languages";
+import { toolsNavigation } from '@/_data/tools';
+import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
+
+import { useLanguage } from '@/ui/components/language/language-provider';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,8 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/ui/components/ui/navigation-menu";
-import { useLanguage } from "@/ui/components/language/language-provider";
+} from '@/ui/components/ui/navigation-menu';
 
 // #endregion
 
@@ -25,9 +26,7 @@ export function NavbarMenu() {
       <NavigationMenuList>
         {/* Components */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>
-            {translate("tools", NAVBAR_LANGUAGES)}
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>{translate('tools', NAVBAR_LANGUAGES)}</NavigationMenuTrigger>
           <NavigationMenuContent className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {toolsNavigation.map((toolLink: ITool, index) => (
               <NavigationMenuLink key={index} asChild>
@@ -39,7 +38,7 @@ export function NavbarMenu() {
         {/* About */}
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
-            <Link to="/about">{translate("about", NAVBAR_LANGUAGES)}</Link>
+            <Link to="/about">{translate('about', NAVBAR_LANGUAGES)}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -59,9 +58,7 @@ export function ListMenuItem({ toolLink }: ListMenuItemProps) {
       to={toolLink.href}
       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
     >
-      <h6 className="text-sm font-medium leading-none">
-        {translate(toolLink.title, TOOLS_LANGUAGES)}
-      </h6>
+      <h6 className="text-sm font-medium leading-none">{translate(toolLink.title, TOOLS_LANGUAGES)}</h6>
       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
         {translate(toolLink.description, TOOLS_LANGUAGES)}
       </p>

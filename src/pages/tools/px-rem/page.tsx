@@ -1,4 +1,4 @@
-import { PxRem } from "@/features";
+import { PxRem } from '@/features';
 
 export function PxRemPage() {
   return <PxRem />;

@@ -1,11 +1,10 @@
 // #region Imports
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { LanguageDropdown } from "../../language/language-dropdown";
-import { ThemeDropdown } from "../../theme/theme-dropdown";
-
-import { NavbarMenu } from "./navbar-menu";
+import { LanguageDropdown } from '../../language/language-dropdown';
+import { ThemeDropdown } from '../../theme/theme-dropdown';
+import { NavbarMenu } from './navbar-menu';
 
 // #endregion
 

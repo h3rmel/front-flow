@@ -1,21 +1,15 @@
-import { PX_REM_LANGUAGES } from "@/_languages";
-import { useLanguage } from "@/ui/components/language/language-provider";
-import { Button } from "@/ui/components/ui/button";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/ui/components/ui/table";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/ui/components/ui/tooltip";
-import { Copy } from "@phosphor-icons/react";
+// #region Imports
+
+import { Copy } from '@phosphor-icons/react';
+
+import { PX_REM_LANGUAGES } from '@/_languages';
+
+import { useLanguage } from '@/ui/components/language/language-provider';
+import { Button } from '@/ui/components/ui/button';
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/ui/components/ui/tooltip';
+
+// #endregion
 
 interface InfoTableProps {
   tableContent: {
@@ -34,14 +28,12 @@ export function InfoTable({ tableContent }: InfoTableProps) {
 
   return (
     <Table className="w-auto border">
-      <TableCaption>
-        {translate("conversion_table", PX_REM_LANGUAGES)}
-      </TableCaption>
+      <TableCaption>{translate('conversion_table', PX_REM_LANGUAGES)}</TableCaption>
       <TableHeader>
         <TableRow className="rounded-2xl">
           <TableHead>Pixels</TableHead>
           <TableHead>REM</TableHead>
-          <TableHead>{translate("tailwind_class", PX_REM_LANGUAGES)}</TableHead>
+          <TableHead>{translate('tailwind_class', PX_REM_LANGUAGES)}</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -53,17 +45,11 @@ export function InfoTable({ tableContent }: InfoTableProps) {
               {tailwind}
               <Tooltip>
                 <TooltipTrigger>
-                  <Button
-                    size="icon-sm"
-                    className="rounded-[8px]"
-                    onClick={() => copyTailwindClass(tailwind)}
-                  >
+                  <Button size="icon-sm" className="rounded-[8px]" onClick={() => copyTailwindClass(tailwind)}>
                     <Copy size={16} />
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>
-                  {translate("copy_tailwind_class", PX_REM_LANGUAGES)}
-                </TooltipContent>
+                <TooltipContent>{translate('copy_tailwind_class', PX_REM_LANGUAGES)}</TooltipContent>
               </Tooltip>
             </TableCell>
           </TableRow>
