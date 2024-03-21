@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 import { GithubLogo } from '@phosphor-icons/react';
 
-import { toolsContent } from '@/_data/tools';
-import { HOME_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
-
 import { RootLayout } from '@/layouts/root-layout';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button, buttonVariants } from '@/ui/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/ui/components/ui/card';
+
+import { toolsContent } from '@/_data/tools';
+import { HOME_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
 
 // #endregion
 

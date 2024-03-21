@@ -2,12 +2,12 @@
 
 import { Copy } from '@phosphor-icons/react';
 
-import { PX_REM_LANGUAGES } from '@/_languages';
-
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button } from '@/ui/components/ui/button';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/ui/components/ui/tooltip';
+
+import { PX_REM_LANGUAGES } from '@/_languages';
 
 // #endregion
 

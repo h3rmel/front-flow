@@ -6,12 +6,12 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
-import { PX_REM_LANGUAGES } from '@/_languages';
-
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Card, CardContent } from '@/ui/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/components/ui/form';
 import { Input } from '@/ui/components/ui/input';
+
+import { PX_REM_LANGUAGES } from '@/_languages';
 
 // #endregion
 

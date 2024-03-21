@@ -31,9 +31,10 @@
           "/^react/",
           "/^@phosphor/",
           "module",
-          "/^@/_/",
+          "/^@/features/",
           "/^@/layouts/",
           "/^@/ui/",
+          "/^@/_/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
