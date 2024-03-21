@@ -25,6 +25,7 @@ export function HomePage() {
   return (
     <RootLayout>
       <section className="relative container flex flex-col items-center justify-center gap-12 p-16 border rounded-t-2xl">
+        {/* Header */}
         <hgroup className="text-center font-sora">
           <h1 className="text-4xl leading-[48px] mb-1">{translate('front_tools', HOME_LANGUAGES)}</h1>
           <h2 className="text-xl font-light">{translate('rack_your_brain', HOME_LANGUAGES)}</h2>

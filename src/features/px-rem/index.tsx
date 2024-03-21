@@ -23,6 +23,7 @@ export function PxRem() {
   return (
     <RootLayout>
       <section className="relative container flex flex-col items-center justify-center gap-8 p-16">
+        {/* Header */}
         <h1 className="inline-flex items-center gap-2 text-2xl">
           PX <ArrowsHorizontal size={28} /> REM
         </h1>
