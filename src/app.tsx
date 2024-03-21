@@ -5,15 +5,18 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "@/pages/router";
 import { ThemeProvider } from "@/ui/components/theme/theme-provider";
 import { LanguageProvider } from "@/ui/components/language/language-provider";
+import { TooltipProvider } from "@/ui/components/ui/tooltip";
 
 // #endregion
 
 export function App() {
   return (
     <ThemeProvider>
-      <LanguageProvider>
-        <RouterProvider router={router} />
-      </LanguageProvider>
+      <TooltipProvider>
+        <LanguageProvider>
+          <RouterProvider router={router} />
+        </LanguageProvider>
+      </TooltipProvider>
     </ThemeProvider>
   );
 }
