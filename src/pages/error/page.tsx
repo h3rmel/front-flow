@@ -1,3 +1,3 @@
-export function Error() {
+export function ErrorPage() {
   return <>error</>;
 }

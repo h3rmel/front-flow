@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 
 import { toolsNavigation } from "@/_data/tools";
+import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from "@/_languages";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,8 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/ui/components/ui/navigation-menu";
-import { useLanguage } from "../../language/language-provider";
-import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from "@/_languages";
+import { useLanguage } from "@/ui/components/language/language-provider";
 
 // #endregion
 
@@ -38,11 +38,9 @@ export function NavbarMenu() {
         </NavigationMenuItem>
         {/* About */}
         <NavigationMenuItem>
-          <Link to="/about">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              {translate("about", NAVBAR_LANGUAGES)}
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+            <Link to="/about">{translate("about", NAVBAR_LANGUAGES)}</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

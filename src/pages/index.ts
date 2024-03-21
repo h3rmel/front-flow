@@ -1,3 +1,4 @@
-export { Home } from "./home/page";
-export { Error } from "./error/page";
-export { About } from "./about/page";
+export { HomePage } from "./home/page";
+export { ErrorPage } from "./error/page";
+export { AboutPage } from "./about/page";
+export * from "./tools";

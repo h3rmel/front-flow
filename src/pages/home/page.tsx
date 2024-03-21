@@ -20,7 +20,7 @@ import { HOME_LANGUAGES, TOOLS_LANGUAGES } from "@/_languages";
 
 // #endregion
 
-export function Home() {
+export function HomePage() {
   const { translate } = useLanguage();
 
   return (
