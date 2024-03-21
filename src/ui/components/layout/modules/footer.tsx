@@ -8,7 +8,12 @@ import { useLanguage } from '@/ui/components/language/language-provider';
 
 // #endregion
 
-export function Footer() {
+/**
+ * Renders the Footer component with information about the developer.
+ *
+ * @return {JSX.Element} The rendered Footer component
+ */
+export function Footer(): JSX.Element {
   const { translate } = useLanguage();
 
   return (

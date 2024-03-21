@@ -13,7 +13,12 @@ import {
 
 // #endregion
 
-export function LanguageDropdown() {
+/**
+ * Renders a dropdown menu for selecting the language of the application.
+ *
+ * @return {JSX.Element} The rendered dropdown menu component.
+ */
+export function LanguageDropdown(): JSX.Element {
   const { language, setLanguage, translate } = useLanguage();
 
   return (

@@ -10,7 +10,14 @@ interface RootLayoutProps {
   children: ReactNode;
 }
 
-export function RootLayout({ children }: RootLayoutProps) {
+/**
+ * Renders the root layout of the application.
+ *
+ * @param {RootLayoutProps} props - The props for the RootLayout component.
+ * @param {ReactNode} props.children - The child components to be rendered within the layout.
+ * @return {JSX.Element} The rendered root layout.
+ */
+export function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
     <>
       <Navbar />

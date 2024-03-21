@@ -20,12 +20,21 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
+/**
+ * ThemeProvider component to provide theme to the entire application.
+ *
+ * @param {ThemeProviderProps} children - The child components to be wrapped by the ThemeProvider.
+ * @param {string} defaultTheme - The default theme to be used if no theme is found in local storage.
+ * @param {string} storageKey - The key to store the theme in local storage.
+ * @param {any} props - Any other props that can be passed to the ThemeProvider.
+ * @return {JSX.Element} The wrapped child components with ThemeProviderContext value.
+ */
 export function ThemeProvider({
   children,
   defaultTheme = 'system',
   storageKey = 'vite-ui-theme',
   ...props
-}: ThemeProviderProps) {
+}: ThemeProviderProps): JSX.Element {
   const [theme, setTheme] = useState<Theme>(() => (localStorage.getItem(storageKey) as Theme) || defaultTheme);
 
   useEffect(() => {
@@ -58,7 +67,12 @@ export function ThemeProvider({
   );
 }
 
-export const useTheme = () => {
+/**
+ * Retrieves the theme from the nearest ThemeProvider in the component tree.
+ *
+ * @return {ThemeProviderState} The theme object provided by the nearest ThemeProvider.
+ */
+export const useTheme = (): ThemeProviderState => {
   const context = useContext(ThemeProviderContext);
 
   if (context === undefined) throw new Error('useTheme must be used within a ThemeProvider');

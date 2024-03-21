@@ -1,31 +1,31 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 
-import { HomePage, ErrorPage, AboutPage, PxRemPage } from "@/pages";
+import { HomePage, ErrorPage, AboutPage, PxRemPage } from '@/pages';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "about",
+        path: 'about',
         element: <AboutPage />,
       },
       {
-        path: "tools",
+        path: 'tools',
         children: [
           {
-            path: "px-rem",
+            path: 'px-rem',
             element: <PxRemPage />,
           },
         ],
       },
       {
-        path: "*",
+        path: '*',
         element: <ErrorPage />,
       },
     ],

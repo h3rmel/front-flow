@@ -19,9 +19,21 @@ interface InfoTableProps {
   }[];
 }
 
-export function InfoTable({ tableContent }: InfoTableProps) {
+/**
+ * Renders an info table with the given table content.
+ *
+ * @param {InfoTableProps} tableContent - the content for the info table
+ * @return {JSX.Element} the rendered info table
+ */
+export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
   const { translate } = useLanguage();
 
+  /**
+   * Copies the given string to the clipboard using the navigator API.
+   *
+   * @param {string} value - the string to be copied to the clipboard
+   * @return {void}
+   */
   function copyTailwindClass(value: string) {
     navigator.clipboard.writeText(value);
   }

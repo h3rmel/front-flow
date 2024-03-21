@@ -18,7 +18,12 @@ import {
 
 // #endregion
 
-export function NavbarMenu() {
+/**
+ * Function representing the NavbarMenu component.
+ *
+ * @return {JSX.Element} The rendered JSX element.
+ */
+export function NavbarMenu(): JSX.Element {
   const { translate } = useLanguage();
 
   return (

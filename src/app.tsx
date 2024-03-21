@@ -10,7 +10,12 @@ import { TooltipProvider } from '@/ui/components/ui/tooltip';
 
 // #endregion
 
-export function App() {
+/**
+ * Renders the main application component.
+ *
+ * @return {JSX.Element} The rendered application component.
+ */
+export function App(): JSX.Element {
   return (
     <ThemeProvider>
       <TooltipProvider>

@@ -21,7 +21,12 @@ const formSchema = z.object({
   base_value: z.number().positive({ message: 'O valor deve ser positivo' }),
 });
 
-export function CardForm() {
+/**
+ * Generate a card form with inputs for PX, REM, and base value. Handles conversion between the values.
+ *
+ * @return {JSX.Element}
+ */
+export function CardForm(): JSX.Element {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -34,21 +39,24 @@ export function CardForm() {
   const { translate } = useLanguage();
 
   const values = form.getValues();
+
+  /**
+   * A function to handle changes in input fields.
+   *
+   * @param {ChangeEvent<HTMLInputElement>} event - the event object containing the input element
+   * @return {void}
+   */
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
     const numValue = Number(value);
 
-    switch (name) {
-      case 'px':
-        form.setValue('rem', numValue / values.base_value);
-        break;
-      case 'rem':
-        form.setValue('px', numValue * values.base_value);
-        break;
-      case 'base_value':
-        form.setValue('px', numValue / values.rem);
-        form.setValue('rem', numValue / values.px);
-        break;
+    if (name === 'px') {
+      form.setValue('rem', numValue / values.base_value);
+    } else if (name === 'rem') {
+      form.setValue('px', numValue * values.base_value);
+    } else if (name === 'base_value') {
+      form.setValue('px', numValue / values.rem);
+      form.setValue('rem', numValue / values.px);
     }
   }
 

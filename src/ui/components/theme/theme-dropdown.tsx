@@ -16,7 +16,12 @@ import {
 
 // #endregion
 
-export function ThemeDropdown() {
+/**
+ * Generate the Theme Dropdown component for selecting different themes.
+ *
+ * @return {JSX.Element} The Theme Dropdown component
+ */
+export function ThemeDropdown(): JSX.Element {
   const { setTheme } = useTheme();
   const { translate } = useLanguage();
 

@@ -8,7 +8,12 @@ import { NavbarMenu } from './navbar-menu';
 
 // #endregion
 
-export function Navbar() {
+/**
+ * Renders the navigation bar component with logo, navigation menu, and options.
+ *
+ * @return {JSX.Element} The navigation bar component
+ */
+export function Navbar(): JSX.Element {
   return (
     <nav className="sticky top-0 left-0 z-50 w-full p-4 border-b bg-background text-foreground">
       <section className="relative container flex items-center justify-center">

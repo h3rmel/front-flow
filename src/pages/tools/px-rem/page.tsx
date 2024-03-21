@@ -12,7 +12,12 @@ import { PX_REM_LANGUAGES } from '@/_languages';
 
 // #endregion
 
-export function PxRemPage() {
+/**
+ * Function to render the PX to REM page content.
+ *
+ * @return {JSX.Element} The content of the PX to REM page.
+ */
+export function PxRemPage(): JSX.Element {
   const { translate } = useLanguage();
 
   return (

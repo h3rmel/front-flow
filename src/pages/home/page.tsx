@@ -15,9 +15,17 @@ import { HOME_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
 
 // #endregion
 
-export function HomePage() {
+/**
+ * Renders the home page component.
+ *
+ * @return {JSX.Element} The rendered home page component.
+ */
+export function HomePage(): JSX.Element {
   const { translate } = useLanguage();
 
+  /**
+   * A function to handle the start action.
+   */
   function handleStart() {
     document.getElementById('tools')?.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }

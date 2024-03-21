@@ -20,11 +20,19 @@ const initialState: LanguageProviderState = {
 
 const LanguageProviderContext = createContext<LanguageProviderState>(initialState);
 
+/**
+ * Creates a language provider component that wraps its children with a language context.
+ *
+ * @param {ReactNode} children - The children to be wrapped by the language provider.
+ * @param {string} [defaultLanguage='pt-BR'] - The default language to be used if no language is set.
+ * @param {string} [storageKey='atelier-language'] - The key used to store the language in local storage.
+ * @return {JSX.Element} The language provider component.
+ */
 export function LanguageProvider({
   children,
   defaultLanguage = 'pt-BR',
   storageKey = 'atelier-language',
-}: LanguagesProviderProps) {
+}: LanguagesProviderProps): JSX.Element {
   const [language, setLanguage] = useState<Language>(
     () => (localStorage.getItem(storageKey) as Language) || defaultLanguage,
   );
@@ -57,7 +65,12 @@ export function LanguageProvider({
   return <LanguageProviderContext.Provider value={value}>{children}</LanguageProviderContext.Provider>;
 }
 
-export const useLanguage = () => {
+/**
+ * Custom hook for accessing the language context.
+ *
+ * @return {LanguageProviderState} The language context object
+ */
+export const useLanguage = (): LanguageProviderState => {
   const context = useContext(LanguageProviderContext);
 
   if (context === undefined) throw new Error('useLanguage must be used within a LanguageProvider');
