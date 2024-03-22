@@ -12,6 +12,7 @@ import {
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
 
 import { PX_REM_LANGUAGES } from '@/_languages';
+import { Button } from '@/ui/components/ui/button';
 
 // #endregion
 
@@ -60,8 +61,10 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
             <TableCell className="w-full inline-flex items-center justify-between gap-2">
               {tailwind}
               <DropdownMenu>
-                <DropdownMenuTrigger className="h-6 w-6 grid place-items-center">
-                  <Copy size={16} />
+                <DropdownMenuTrigger>
+                  <Button size="icon" variant="ghost">
+                    <Copy size={22} />
+                  </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem onClick={() => copySpacingValue(`gap: ${px}`)}>
