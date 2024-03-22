@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { HomePage, ErrorPage, AboutPage, PxRemPage } from '@/pages';
+import { HomePage, ErrorPage, AboutPage } from '@/pages';
+import { PxRemPage, ColorsConverterPage } from '@/pages/tools';
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
           {
             path: 'px-rem',
             element: <PxRemPage />,
+          },
+          {
+            path: 'colors-converter',
+            element: <ColorsConverterPage />,
           },
         ],
       },
