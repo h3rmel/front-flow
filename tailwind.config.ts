@@ -95,6 +95,9 @@ const config: Config = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
       },
+      backgroundImage: {
+        blackout: 'url(/blackout.svg)',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 4px)',

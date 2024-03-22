@@ -1,12 +1,12 @@
 // #region Imports
 
-import { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
 import { Footer, Navbar } from '@/ui/components/layout';
 
 // #endregion
 
-interface RootLayoutProps {
+interface RootLayoutProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 }
 
@@ -17,11 +17,13 @@ interface RootLayoutProps {
  * @param {ReactNode} props.children - The child components to be rendered within the layout.
  * @return {JSX.Element} The rendered root layout.
  */
-export function RootLayout({ children }: RootLayoutProps): JSX.Element {
+export function RootLayout({ children, ...rest }: RootLayoutProps): JSX.Element {
   return (
     <>
       <Navbar />
-      <main className="p-12">{children}</main>
+      <main {...rest}>
+        {children}
+      </main>
       <Footer />
     </>
   );

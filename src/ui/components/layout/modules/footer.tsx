@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { FOOTER_LANGUAGES } from '@/_languages';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
+import { Button } from '../../ui/button';
+import { GithubLogo } from '@phosphor-icons/react';
 
 // #endregion
 
@@ -21,8 +23,16 @@ export function Footer(): JSX.Element {
       <section className="container flex items-center justify-between">
         <p>
           {translate('developed_by', FOOTER_LANGUAGES)}{' '}
-          <Link to="https://github.com/K4mome" target="_blank" className="hover:underline">
-            Kamome.
+          <Link to="https://github.com/K4mome" target="_blank" className="text-kamome-green-500 hover:underline">
+            Kamome. {' '}
+          </Link>
+          {translate('all_rights_reserved', FOOTER_LANGUAGES)}
+        </p>
+        <p>
+        <Link to="https://github.com/K4mome/atelier" target="_blank">
+            <Button variant="ghost" size="icon">
+              <GithubLogo size={22} />
+            </Button>
           </Link>
         </p>
       </section>

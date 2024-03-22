@@ -3,7 +3,7 @@
 import { Link } from 'react-router-dom';
 
 import { LanguageDropdown } from '../../language/language-dropdown';
-import { ThemeDropdown } from '../../theme/theme-dropdown';
+import { ThemeToggle } from '../../theme/theme-toggle';
 import { NavbarMenu } from './navbar-menu';
 
 // #endregion
@@ -18,7 +18,7 @@ export function Navbar(): JSX.Element {
     <nav className="sticky top-0 left-0 z-50 w-full p-4 border-b bg-background text-foreground">
       <section className="relative container flex items-center justify-center">
         {/* Logo */}
-        <Link to="/" className="absolute left-0">
+        <Link to="/" className="absolute left-4">
           <h1 className="text-3xl font-sora font-medium tracking-widest duration-300 hover:text-kamome-green-500">
             Atelier
           </h1>
@@ -26,9 +26,9 @@ export function Navbar(): JSX.Element {
         {/* Navigation Menu */}
         <NavbarMenu />
         {/* Options */}
-        <div className="absolute right-0 flex items-center gap-4">
+        <div className="absolute right-4 flex items-center gap-4">
           <LanguageDropdown />
-          <ThemeDropdown />
+          <ThemeToggle />
         </div>
       </section>
     </nav>
