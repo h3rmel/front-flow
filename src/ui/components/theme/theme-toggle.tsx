@@ -11,9 +11,9 @@ import { useLanguage } from '@/ui/components/language/language-provider';
 // #endregion
 
 /**
- * Generate the Theme Dropdown component for selecting different themes.
+ * Renders a theme toggle button that allows the user to switch between light and dark themes.
  *
- * @return {JSX.Element} The Theme Dropdown component
+ * @return {JSX.Element} The rendered theme toggle button.
  */
 export function ThemeToggle(): JSX.Element {
   const { setTheme, theme } = useTheme();
