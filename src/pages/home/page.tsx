@@ -120,7 +120,7 @@ export function HomePage(): JSX.Element {
         id="tools"
         className="relative container flex flex-col items-center gap-8 py-32 border overflow-hidden rounded-b-2xl"
       >
-        <h2 className="text-3xl font-sora text-center">{translate('tools', HOME_LANGUAGES)}</h2>
+        <h2 className="text-4xl font-sora text-center">{translate('tools', HOME_LANGUAGES)}</h2>
         <div className="flex flex-wrap items-center gap-4">
           <Wrench className="absolute top-4 left-4" size={32} />
           {toolsContent.map((tool: IToolSimplified, index: number) => (
