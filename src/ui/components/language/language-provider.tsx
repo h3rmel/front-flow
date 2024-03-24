@@ -21,12 +21,12 @@ const initialState: LanguageProviderState = {
 const LanguageProviderContext = createContext<LanguageProviderState>(initialState);
 
 /**
- * Creates a language provider component that wraps its children with a language context.
+ * Provides language context to its children components.
  *
- * @param {ReactNode} children - The children to be wrapped by the language provider.
- * @param {string} [defaultLanguage='pt-BR'] - The default language to be used if no language is set.
+ * @param {ReactNode} children - The children components.
+ * @param {Language} [defaultLanguage='pt-BR'] - The default language.
  * @param {string} [storageKey='atelier-language'] - The key used to store the language in local storage.
- * @return {JSX.Element} The language provider component.
+ * @returns {JSX.Element} The language provider component.
  */
 export function LanguageProvider({
   children,
@@ -40,9 +40,9 @@ export function LanguageProvider({
   /**
    * Translate the given key using the provided translation list.
    *
-   * @param {string} key - the key to be translated
-   * @param {LanguageList} list - the list of translations
-   * @return {string} description of return value
+   * @param {string} key - The key to be translated.
+   * @param {LanguageList} list - The list of translations.
+   * @returns {string} The translated value.
    */
   const translate = useCallback(
     (key: string, list: LanguageList): string => {
@@ -66,14 +66,16 @@ export function LanguageProvider({
 }
 
 /**
- * Custom hook for accessing the language context.
+ * Custom hook that provides the language state from the LanguageProvider context.
+ * Throws an error if used outside of a LanguageProvider.
  *
- * @return {LanguageProviderState} The language context object
+ * @returns {LanguageProviderState} The language state from the LanguageProvider context.
+ * @throws {Error} If used outside of a LanguageProvider.
  */
 export const useLanguage = (): LanguageProviderState => {
   const context = useContext(LanguageProviderContext);
 
-  if (context === undefined) throw new Error('useLanguage must be used within a LanguageProvider');
+  if (!context) throw new Error('useLanguage must be used within a LanguageProvider');
 
   return context;
 };

@@ -20,14 +20,14 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
+
 /**
- * ThemeProvider component to provide theme to the entire application.
- *
- * @param {ThemeProviderProps} children - The child components to be wrapped by the ThemeProvider.
- * @param {string} defaultTheme - The default theme to be used if no theme is found in local storage.
- * @param {string} storageKey - The key to store the theme in local storage.
- * @param {any} props - Any other props that can be passed to the ThemeProvider.
- * @return {JSX.Element} The wrapped child components with ThemeProviderContext value.
+ * Provides a theme for the application.
+ * @param {ReactNode} children - The child components to be wrapped by the theme provider.
+ * @param {Theme} defaultTheme - The default theme to be used if no theme is stored in local storage.
+ * @param {string} storageKey - The key used to store the theme in local storage.
+ * @param {any }props - Additional props to be passed to the underlying provider component.
+ * @returns {JSX.Element} The theme provider component.
  */
 export function ThemeProvider({
   children,
@@ -68,9 +68,10 @@ export function ThemeProvider({
 }
 
 /**
- * Retrieves the theme from the nearest ThemeProvider in the component tree.
- *
- * @return {ThemeProviderState} The theme object provided by the nearest ThemeProvider.
+ * Custom hook that provides access to the theme state within a ThemeProvider.
+ * 
+ * @returns {ThemeProviderState} The theme state from the nearest ThemeProvider.
+ * @throws {Error} If used outside of a ThemeProvider.
  */
 export const useTheme = (): ThemeProviderState => {
   const context = useContext(ThemeProviderContext);
