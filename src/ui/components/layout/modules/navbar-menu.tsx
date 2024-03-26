@@ -61,7 +61,7 @@ export function ListMenuItem({ toolLink }: ListMenuItemProps) {
   return (
     <Link
       to={toolLink.href}
-      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent dark:focus:bg-accent/50 focus:text-accent-foreground"
     >
       <h6 className="text-sm font-medium leading-none">{translate(toolLink.title, TOOLS_LANGUAGES)}</h6>
       <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">

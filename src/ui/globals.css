@@ -84,6 +84,6 @@
 
   code,
   kbd {
-    @apply font-ibm-plex-mono;
+    @apply font-ibm-plex-mono font-medium tracking-wide py-1 px-2 bg-accent dark:bg-accent/50 rounded-sm;
   }
 }

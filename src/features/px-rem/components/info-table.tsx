@@ -56,10 +56,14 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
       <TableBody>
         {tableContent.map(({ px, rem, tailwind }, index) => (
           <TableRow key={index}>
-            <TableCell>{px}</TableCell>
-            <TableCell>{rem}</TableCell>
+            <TableCell>
+              <kbd>{px}</kbd>
+            </TableCell>
+            <TableCell>
+              <kbd>{rem}</kbd>
+            </TableCell>
             <TableCell className="w-full inline-flex items-center justify-between gap-2">
-              {tailwind}
+              <kbd>{tailwind}</kbd>
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <Button size="icon" variant="ghost">
