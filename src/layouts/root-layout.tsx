@@ -1,6 +1,6 @@
 // #region Imports
 
-import React, { HTMLAttributes, ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
 import { Footer, Navbar } from '@/ui/components/layout';
 
@@ -21,9 +21,7 @@ export function RootLayout({ children, ...rest }: RootLayoutProps): JSX.Element 
   return (
     <>
       <Navbar />
-      <main {...rest}>
-        {children}
-      </main>
+      <main {...rest}>{children}</main>
       <Footer />
     </>
   );
