@@ -26,6 +26,10 @@ const config: Config = {
         'space-grotesk': ['Space Grotesk', 'sans-serif'],
         'ibm-plex-mono': ['IBM Plex Mono', 'monospace'],
       },
+      backgroundImage: {
+        burst: 'url(./backgrounds/burst.svg)',
+        oscilate: 'url(./backgrounds/oscilate.svg)',
+      },
       /**
        * Shadcn/ui
        * @see {@url https://ui.shadcn.com/}
@@ -94,9 +98,6 @@ const config: Config = {
         },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-      },
-      backgroundImage: {
-        blackout: 'url(/blackout.svg)',
       },
       borderRadius: {
         lg: 'var(--radius)',

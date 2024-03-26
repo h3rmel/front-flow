@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { GithubLogo, Question, TextHOne, TextHTwo, Wrench } from '@phosphor-icons/react';
 
-import { BlackoutBackground } from '@/assets/blackout';
-
 import { RootLayout } from '@/layouts/root-layout';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
@@ -35,7 +33,7 @@ export function HomePage(): JSX.Element {
   return (
     <RootLayout className="p-12">
       {/* Header */}
-      <section className="relative container flex flex-col items-center gap-6 px-16 py-64 border overflow-hidden rounded-t-2xl">
+      <section className="relative container flex flex-col items-center gap-6 px-16 py-64 border overflow-hidden rounded-t-2xl bg-background bg-oscilate bg-no-repeat bg-center">
         <TextHOne size={32} className="absolute top-4 left-4" />
         <hgroup className="font-sora text-center flex flex-col z-10">
           <h1 className="text-3xl font-medium leading-[40px]">{translate('front_tools', HOME_LANGUAGES)}</h1>
@@ -51,10 +49,9 @@ export function HomePage(): JSX.Element {
             </Button>
           </Link>
         </div>
-        <BlackoutBackground className="top-0" />
       </section>
       {/* Sub Headers */}
-      <section className="relative container flex flex-col gap-16 px-24 py-32 border border-t-0 overflow-hidden">
+      <section className="relative container flex flex-col gap-16 px-24 py-32 border border-t-0 overflow-hidden bg-background">
         <TextHTwo size={32} className="absolute top-4 left-4" />
         <div className="flex flex-col items-start">
           <h2 className="font-sora text-2xl">{translate('rack_your_brain', HOME_LANGUAGES)}</h2>
@@ -62,11 +59,11 @@ export function HomePage(): JSX.Element {
         <div className="flex flex-col items-end">
           <h2 className="font-sora text-2xl">{translate('all_that_tools', HOME_LANGUAGES)}</h2>
         </div>
-        <img src="/dashed-circle.svg" className="absolute bottom-[55%] right-[5%] opacity-30 pointer-events-none" alt="Dashed Square" />
-        <img src="/dashed-circle.svg" className="absolute top-[55%] left-[5%] opacity-30 pointer-events-none" alt="Dashed Square" />
+        <img src="/shapes/gradient-circle.svg" className="absolute bottom-[60%] right-[40%] opacity-40 pointer-events-none" alt="Gradient Square" />
+        <img src="/shapes/gradient-circle.svg" className="absolute top-[60%] left-[40%] opacity-40 pointer-events-none" alt="Gradient Square" />
       </section>
       {/* Explanations */}
-      <section className="relative container flex flex-col gap-8 px-16 py-32 border border-y-0 overflow-hidden">
+      <section className="relative container flex flex-col gap-8 px-16 py-32 border border-y-0 overflow-hidden bg-background bg-burst">
         <Question size={32} className="absolute top-4 left-4" />
         <Card className="ml-auto mr-[10%]">
           <CardHeader>
@@ -104,21 +101,11 @@ export function HomePage(): JSX.Element {
             <p className="text-justify">{translate('liked_the_project_content', HOME_LANGUAGES)}</p>
           </CardContent>
         </Card>
-        <img
-          src="/dashed-square.svg"
-          className="absolute top-[-16%] left-[-15%] rotate-45 opacity-30 pointer-events-none"
-          alt="Dashed Square"
-        />
-        <img
-          src="/dashed-square.svg"
-          className="absolute bottom-[-16%] right-[-15%] rotate-45 opacity-30 pointer-events-none"
-          alt="Dashed Square"
-        />
       </section>
       {/* Tools */}
       <section
         id="tools"
-        className="relative container flex flex-col items-center gap-8 py-32 border overflow-hidden rounded-b-2xl"
+        className="relative container flex flex-col items-center gap-8 py-32 border overflow-hidden rounded-b-2xl bg-background"
       >
         <h2 className="text-4xl font-sora text-center">{translate('tools', HOME_LANGUAGES)}</h2>
         <div className="flex flex-wrap items-center gap-4">
@@ -129,8 +116,8 @@ export function HomePage(): JSX.Element {
             </Link>
           ))}
         </div>
-        <img src="/dashed-square.svg" className="absolute top-[50%] right-[-10%] opacity-30 pointer-events-none" alt="Dashed Square" />
-        <img src="/dashed-circle.svg" className="absolute bottom-[50%] left-[-10%] opacity-30 pointer-events-none" alt="Dashed Square" />
+        <img src="/shapes/gradient-square.svg" className="absolute top-[50%] left-[65%] right-[-10%] opacity-40 pointer-events-none" alt="Gradient Square" />
+        <img src="/shapes/gradient-circle.svg" className="absolute bottom-[40%] right-[65%] left-[-10%] opacity-40 pointer-events-none" alt="Gradient Circle" />
       </section>
     </RootLayout>
   );
