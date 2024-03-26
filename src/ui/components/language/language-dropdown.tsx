@@ -1,6 +1,6 @@
-// #region Imports
+'use client';
 
-import { NAVBAR_LANGUAGES } from '@/_languages';
+// #region Imports
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button } from '@/ui/components/ui/button';
@@ -10,6 +10,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/ui/components/ui/dropdown-menu';
+
+import { NAVBAR_LANGUAGES } from '@/_languages';
 
 // #endregion
 

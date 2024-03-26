@@ -1,12 +1,15 @@
+'use client';
+
 // #region Imports
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
-import { FOOTER_LANGUAGES } from '@/_languages';
+import { GithubLogo } from '@phosphor-icons/react';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
-import { Button } from '../../ui/button';
-import { GithubLogo } from '@phosphor-icons/react';
+import { Button } from '@/ui/components/ui/button';
+
+import { FOOTER_LANGUAGES } from '@/_languages';
 
 // #endregion
 
@@ -23,13 +26,13 @@ export function Footer(): JSX.Element {
       <section className="container flex items-center justify-between">
         <p>
           {translate('developed_by', FOOTER_LANGUAGES)}{' '}
-          <Link to="https://github.com/K4mome" target="_blank" className="text-kamome-green-500 hover:underline">
-            Kamome. {' '}
+          <Link href="https://github.com/K4mome" target="_blank" className="text-kamome-green-500 hover:underline">
+            Kamome.{' '}
           </Link>
           {translate('all_rights_reserved', FOOTER_LANGUAGES)}
         </p>
         <p>
-        <Link to="https://github.com/K4mome/atelier" target="_blank">
+          <Link href="https://github.com/K4mome/atelier" target="_blank">
             <Button variant="ghost" size="icon">
               <GithubLogo size={22} />
             </Button>

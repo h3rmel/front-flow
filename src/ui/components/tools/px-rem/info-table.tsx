@@ -1,8 +1,11 @@
+'use client';
+
 // #region Imports
 
 import { Copy } from '@phosphor-icons/react';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
+import { Button } from '@/ui/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,7 +15,6 @@ import {
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
 
 import { PX_REM_LANGUAGES } from '@/_languages';
-import { Button } from '@/ui/components/ui/button';
 
 // #endregion
 
@@ -39,7 +41,7 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
    * @param {string} value - the string to be copied to the clipboard
    * @return {void}
    */
-  function copySpacingValue(value: string) {
+  function copySpacingValue(value: string): void {
     navigator.clipboard.writeText(value);
   }
 

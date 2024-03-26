@@ -2,7 +2,7 @@ export const NAVBAR_LANGUAGES: LanguageList = {
   /**
    * <ThemeDropdown/> component
    */
-  'toggle-theme': {
+  toggle_theme: {
     'pt-BR': 'Alternar tema',
     'en-US': 'Toggle theme',
   },

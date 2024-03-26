@@ -1,9 +1,8 @@
+'use client';
+
 // #region Imports
 
-import { Link } from 'react-router-dom';
-
-import { toolsNavigation } from '@/_data/tools';
-import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
+import Link from 'next/link';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 import {
@@ -15,6 +14,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/ui/components/ui/navigation-menu';
+
+import { toolsNavigation } from '@/_data/tools';
+import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
 
 // #endregion
 
@@ -43,7 +45,7 @@ export function NavbarMenu(): JSX.Element {
         {/* About */}
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
-            <Link to="/about">{translate('about', NAVBAR_LANGUAGES)}</Link>
+            <Link href="/about">{translate('about', NAVBAR_LANGUAGES)}</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -60,7 +62,7 @@ export function ListMenuItem({ toolLink }: ListMenuItemProps) {
 
   return (
     <Link
-      to={toolLink.href}
+      href={toolLink.href}
       className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent dark:focus:bg-accent/50 focus:text-accent-foreground"
     >
       <h6 className="text-sm font-medium leading-none">{translate(toolLink.title, TOOLS_LANGUAGES)}</h6>

@@ -1,4 +1,8 @@
+'use client';
+
 import { ReactNode, createContext, useCallback, useContext, useState } from 'react';
+
+// #region Interfaces
 
 interface LanguagesProviderProps {
   children: ReactNode;
@@ -11,6 +15,8 @@ interface LanguageProviderState {
   setLanguage: (language: Language) => void;
   translate: (key: string, list: LanguageList) => string;
 }
+
+// #endregion
 
 const initialState: LanguageProviderState = {
   language: 'pt-BR',
