@@ -1,17 +1,9 @@
 {
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:@typescript-eslint/recommended",
+    "next",
     "eslint-config-prettier"
   ],
   "settings": {
-    "react": {
-      "version": "detect"
-    },
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
@@ -21,14 +13,14 @@
   },
   "plugins": ["import-helpers"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "spaced-comment": "error",
+    "spaced-comment": "warn",
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always", // new line between groups
         "groups": [
           "/^react/",
+          "/^next/",
           "/^@phosphor/",
           "module",
           "/^@/features/",

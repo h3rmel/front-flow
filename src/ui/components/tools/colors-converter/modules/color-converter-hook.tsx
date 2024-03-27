@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode, createContext, useContext } from 'react';
 
 interface ColorConverterProviderProps {
@@ -154,7 +156,7 @@ export function ColorConverterProvider({ children }: ColorConverterProviderProps
 
   /**
    * Converts HSL (Hue, Saturation, Lightness) color values to RGB (Red, Green, Blue) color values.
-   * 
+   *
    * @param h - The hue value (0-360).
    * @param s - The saturation value (0-100).
    * @param l - The lightness value (0-100).
@@ -200,10 +202,13 @@ export function ColorConverterProvider({ children }: ColorConverterProviderProps
       g = 0;
       b = x;
     }
-    
+
     r = Math.round((r + m) * 255);
     g = Math.round((g + m) * 255);
     b = Math.round((b + m) * 255);
+
+    console.log("hslToRgb: ", { h, s, l });
+    console.log("hslToRgb: ", { r, g, b });
 
     return { r, g, b };
   }

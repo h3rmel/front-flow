@@ -1,2 +1,2 @@
-export { Navbar } from "./modules/navbar";
-export { Footer } from "./modules/footer";
+export { Navbar } from './modules/navbar';
+export { Footer } from './modules/footer';

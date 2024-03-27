@@ -1,10 +1,11 @@
+'use client';
+
 // #region Imports
 
-import { Link } from 'react-router-dom';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import { GithubLogo, Question, TextHOne, TextHTwo, Wrench } from '@phosphor-icons/react';
-
-import { RootLayout } from '@/layouts/root-layout';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button, buttonVariants } from '@/ui/components/ui/button';
@@ -20,9 +21,8 @@ import { HOME_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
  *
  * @return {JSX.Element} The rendered home page component.
  */
-export function HomePage(): JSX.Element {
+export default function Home(): JSX.Element {
   const { translate } = useLanguage();
-
   /**
    * A function to handle the start action.
    */
@@ -31,19 +31,21 @@ export function HomePage(): JSX.Element {
   }
 
   return (
-    <RootLayout className="p-12">
+    <main className="p-12">
       {/* Header */}
       <section className="relative container flex flex-col items-center gap-6 px-16 py-64 border overflow-hidden rounded-t-2xl bg-background bg-oscilate bg-no-repeat bg-center">
         <TextHOne size={32} className="absolute top-4 left-4" />
         <hgroup className="font-sora text-center flex flex-col z-10">
-          <h1 className="text-3xl font-medium leading-[40px]">{translate('front_tools', HOME_LANGUAGES)}</h1>
-          <h2 className="text-3xl font-medium leading-[40px] text-kamome-gray-600 dark:text-kamome-gray-300">
+          <h1 className="text-3xl font-medium leading-[40px] tracking-wide">{translate('front_tools', HOME_LANGUAGES)}</h1>
+          <h2 className="text-3xl font-medium leading-[40px] tracking-wide text-kamome-gray-600 dark:text-kamome-gray-300">
             {translate('all_in_one_place', HOME_LANGUAGES)}
           </h2>
         </hgroup>
         <div className="flex items-center gap-4">
-          <Button onClick={handleStart} variant="primary">{translate('btn_start', HOME_LANGUAGES)}</Button>
-          <Link to="https://github.com/K4mome/atelier" target="_blank">
+          <Button onClick={handleStart} variant="primary">
+            {translate('btn_start', HOME_LANGUAGES)}
+          </Button>
+          <Link href="https://github.com/K4mome/atelier" target="_blank">
             <Button variant="outline">
               <GithubLogo size={20} /> GitHub
             </Button>
@@ -59,8 +61,20 @@ export function HomePage(): JSX.Element {
         <div className="flex flex-col items-end">
           <h2 className="font-sora text-2xl">{translate('all_that_tools', HOME_LANGUAGES)}</h2>
         </div>
-        <img src="/shapes/gradient-circle.svg" className="absolute bottom-[60%] right-[40%] opacity-40 pointer-events-none" alt="Gradient Square" />
-        <img src="/shapes/gradient-circle.svg" className="absolute top-[60%] left-[40%] opacity-40 pointer-events-none" alt="Gradient Square" />
+        <Image
+          src="/shapes/gradient-circle.svg"
+          className="absolute bottom-[60%] right-[40%] opacity-40 pointer-events-none"
+          alt="Gradient Square"
+          width={800}
+          height={800}
+        />
+        <Image
+          src="/shapes/gradient-circle.svg"
+          className="absolute top-[60%] left-[40%] opacity-40 pointer-events-none"
+          alt="Gradient Square"
+          width={800}
+          height={800}
+        />
       </section>
       {/* Explanations */}
       <section className="relative container flex flex-col gap-8 px-16 py-32 border border-y-0 overflow-hidden bg-background bg-burst">
@@ -111,14 +125,26 @@ export function HomePage(): JSX.Element {
         <div className="flex flex-wrap items-center gap-4">
           <Wrench className="absolute top-4 left-4" size={32} />
           {toolsContent.map((tool: IToolSimplified, index: number) => (
-            <Link key={index} to={tool.href} className={buttonVariants({ variant: 'outline' })}>
+            <Link key={index} href={tool.href} className={buttonVariants({ variant: 'outline' })}>
               {translate(tool.title, TOOLS_LANGUAGES)}
             </Link>
           ))}
         </div>
-        <img src="/shapes/gradient-square.svg" className="absolute top-[50%] left-[65%] right-[-10%] opacity-40 pointer-events-none" alt="Gradient Square" />
-        <img src="/shapes/gradient-circle.svg" className="absolute bottom-[40%] right-[65%] left-[-10%] opacity-40 pointer-events-none" alt="Gradient Circle" />
+        <Image
+          src="/shapes/gradient-square.svg"
+          className="absolute top-[50%] left-[65%] right-[-10%] opacity-40 pointer-events-none"
+          alt="Gradient Square"
+          width={800}
+          height={800}
+        />
+        <Image
+          src="/shapes/gradient-circle.svg"
+          className="absolute bottom-[40%] right-[65%] left-[-10%] opacity-40 pointer-events-none"
+          alt="Gradient Circle"
+          width={800}
+          height={800}
+        />
       </section>
-    </RootLayout>
+    </main>
   );
 }

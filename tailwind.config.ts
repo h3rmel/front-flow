@@ -22,13 +22,13 @@ const config: Config = {
        * @see {@url https://www.figma.com/community/file/1349129545290357189/kamome-brand}
        */
       fontFamily: {
-        sora: ['Sora', 'sans-serif'],
-        'space-grotesk': ['Space Grotesk', 'sans-serif'],
-        'ibm-plex-mono': ['IBM Plex Mono', 'monospace'],
+        sora: 'var(--font-sora)',
+        'space-grotesk': 'var(--font-space-grotesk)',
+        'ibm-plex-mono': 'var(--font-ibm-plex-mono)',
       },
       backgroundImage: {
-        burst: 'url(./backgrounds/burst.svg)',
-        oscilate: 'url(./backgrounds/oscilate.svg)',
+        burst: 'url(/backgrounds/burst.svg)',
+        oscilate: 'url(/backgrounds/oscilate.svg)',
       },
       /**
        * Shadcn/ui

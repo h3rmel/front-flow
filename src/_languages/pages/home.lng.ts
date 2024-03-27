@@ -1,7 +1,7 @@
 export const HOME_LANGUAGES: LanguageList = {
   front_tools: {
-    'pt-BR': 'Atelier é a Central de Ferramentas front-end.',
-    'en-US': 'Atelier is the front-end tools central.',
+    'pt-BR': 'Atelier é a Central de Ferramentas Front-end.',
+    'en-US': 'Atelier is the Front-end Tools Central.',
   },
   all_in_one_place: {
     'pt-BR': 'Tudo em um só lugar!',
@@ -9,10 +9,10 @@ export const HOME_LANGUAGES: LanguageList = {
   },
   rack_your_brain: {
     'pt-BR': 'Desenvolva sem “quebrar a cabeça” com questões de UI.',
-    'en-US': 'Develop without rack your brain with UI questions.',
+    'en-US': 'Develop without “rack your brain” with UI questions.',
   },
   all_that_tools: {
-    'pt-BR': 'Todas aquelas ferramentas que você usa. Agora em um lugar so!',
+    'pt-BR': 'Todas aquelas ferramentas que você usa. Agora em um só lugar!',
     'en-US': 'All that tools you use. Now in one place!',
   },
   what_is_atelier: {
@@ -21,7 +21,7 @@ export const HOME_LANGUAGES: LanguageList = {
   },
   what_is_atelier_description: {
     'pt-BR': 'Uma breve explicação...',
-    'en-US': 'A short description...',
+    'en-US': 'A short explanation...',
   },
   what_is_atelier_content: {
     'pt-BR':
