@@ -9,6 +9,9 @@ import { COLORS_CONVERTER_LANGUAGES } from '@/_languages';
 
 // #endregion
 
+// TODO: Work on a way to export metadata. (remove the use client from the top.)
+// export const metadata: Metadata = {}
+
 export function ColorsConverterInterface(): JSX.Element {
   const { translate } = useLanguage();
 

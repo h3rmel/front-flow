@@ -50,12 +50,6 @@ export function NavbarMenu(): JSX.Element {
             ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
-        {/* About */}
-        <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
-            <Link href="/about">{translate('about', NAVBAR_LANGUAGES)}</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

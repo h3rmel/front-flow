@@ -15,6 +15,9 @@ import { PX_REM_LANGUAGES } from '@/_languages';
 export const FIRST_HALF = PX_REM_CONVERSION.slice(0, PX_REM_CONVERSION.length / 2);
 export const SECOND_HALF = PX_REM_CONVERSION.slice(PX_REM_CONVERSION.length / 2, PX_REM_CONVERSION.length);
 
+// TODO: Work on a way to export metadata. (remove the use client from the top.)
+// export const metadata: Metadata = {}
+
 /**
  * Function to render the PX to REM page content.
  *
