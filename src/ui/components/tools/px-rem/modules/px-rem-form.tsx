@@ -78,8 +78,6 @@ export function PxRemForm(): JSX.Element {
     }
   }, 200);
 
-  console.log(formErrors);
-
   return (
     <Card className="p-8">
       <Form {...form}>

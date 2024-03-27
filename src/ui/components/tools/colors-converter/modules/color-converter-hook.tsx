@@ -207,9 +207,6 @@ export function ColorConverterProvider({ children }: ColorConverterProviderProps
     g = Math.round((g + m) * 255);
     b = Math.round((b + m) * 255);
 
-    console.log("hslToRgb: ", { h, s, l });
-    console.log("hslToRgb: ", { r, g, b });
-
     return { r, g, b };
   }
 
