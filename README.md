@@ -20,11 +20,10 @@ npm run dev
 If you don't run on any issues, you will see a message like this:
 
 ```bash
-VITE v5.1.6  ready in 118 ms
+  ▲ Next.js 14.1.4
+   - Local:        http://localhost:3000
 
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-  ➜  press h + enter to show help
+ ✓ Ready in 1404ms
 ```
 
 ## Folder Structure 🗄️
