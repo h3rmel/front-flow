@@ -36,12 +36,10 @@ const LanguageProviderContext = createContext<LanguageProviderState>(initialStat
  */
 export function LanguageProvider({
   children,
-  defaultLanguage = 'pt-BR',
+  defaultLanguage = 'en-US',
   storageKey = 'atelier-language',
 }: LanguagesProviderProps): JSX.Element {
-  const [language, setLanguage] = useState<Language>(
-    () => (localStorage.getItem(storageKey) as Language) || defaultLanguage,
-  );
+  const [language, setLanguage] = useState<Language>(defaultLanguage);
 
   /**
    * Translates a given key using the provided language list.
