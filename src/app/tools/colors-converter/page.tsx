@@ -3,7 +3,7 @@
 // #region Imports
 
 import { useLanguage } from '@/ui/components/language/language-provider';
-import { ColorConverterProvider } from '@/ui/components/tools/colors-converter';
+import { ColorConverterProvider, ColorsForm } from '@/ui/components/tools/colors-converter';
 
 import { COLORS_CONVERTER_LANGUAGES } from '@/_languages';
 
@@ -13,9 +13,12 @@ export function ColorsConverterInterface(): JSX.Element {
   const { translate } = useLanguage();
 
   return (
-    <main className="p-12">
-      <section className="relative container">
+    <main>
+      <section className="relative container flex flex-col items-center justify-center gap-8 p-16">
+        {/* Title */}
         <h1 className="text-2xl text-center">{translate('colors_converter', COLORS_CONVERTER_LANGUAGES)}</h1>
+        {/* Colors Form */}
+        <ColorsForm />
       </section>
     </main>
   );

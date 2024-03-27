@@ -13,7 +13,7 @@ interface LanguagesProviderProps {
 interface LanguageProviderState {
   language: Language;
   setLanguage: (language: Language) => void;
-  translate: (key: string, list: LanguageList) => string;
+  translate: (key: string | undefined, list: LanguageList) => string | undefined;
 }
 
 // #endregion
@@ -44,14 +44,15 @@ export function LanguageProvider({
   );
 
   /**
-   * Translate the given key using the provided translation list.
-   *
-   * @param {string} key - The key to be translated.
-   * @param {LanguageList} list - The list of translations.
-   * @returns {string} The translated value.
+   * Translates a given key using the provided language list.
+   * @param {string | undefined} key - The key to be translated.
+   * @param {LanguageList} list - The language list containing translations for the key.
+   * @returns {string | undefined} The translated string if the key is found in the list and a valid language is set, otherwise undefined.
    */
   const translate = useCallback(
-    (key: string, list: LanguageList): string => {
+    (key: string | undefined, list: LanguageList): string => {
+      if (key === undefined) return '';
+
       if (!language) return list[key]['pt-BR'];
 
       return list[key][language];

@@ -1,1 +1,2 @@
-export { ColorConverterProvider, useColorsConverter } from './color-converter-hook';
+export { ColorConverterProvider, useColorsConverter } from './modules/color-converter-hook';
+export { ColorsForm } from './modules/colors-form';

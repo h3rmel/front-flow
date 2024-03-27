@@ -1,8 +1,7 @@
 export const PX_REM_LANGUAGES: LanguageList = {
-  form_schema_be_positive: {
-    'pt-BR': 'O valor deve ser positivo',
-    'en-US': 'The value must be positive',
-  },
+  /**
+   * Texts
+   */
   conversion_table: {
     'pt-BR': 'Tabela de Conversão',
     'en-US': 'Conversion table',
@@ -26,5 +25,16 @@ export const PX_REM_LANGUAGES: LanguageList = {
   copy_rem: {
     'pt-BR': 'Copiar Valor em REM',
     'en-US': 'Copy value in rem',
+  },
+  /**
+   * Form validation
+   */
+  form_schema_be_positive: {
+    'pt-BR': 'O valor deve ser positivo',
+    'en-US': 'The value must be positive',
+  },
+  invalid_type: {
+    'pt-BR': 'Tipo inválido',
+    'en-US': 'Invalid type',
   },
 };

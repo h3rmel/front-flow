@@ -1,3 +1,5 @@
+// TODO: Create a way of using it in the app.
+
 /**
  * Translates a given key into the corresponding language from the provided list.
  * If the language is not set, it defaults to 'pt-BR'.

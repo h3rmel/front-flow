@@ -1,2 +1,2 @@
-export { CardForm } from './card-form';
-export { InfoTable } from './info-table';
+export { PxRemForm } from './modules/px-rem-form';
+export { InfoTable } from './modules/info-table';

@@ -67,7 +67,7 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
             <TableCell className="w-full inline-flex items-center justify-between gap-2">
               <kbd>{tailwind}</kbd>
               <DropdownMenu>
-                <DropdownMenuTrigger>
+                <DropdownMenuTrigger asChild>
                   <Button size="icon" variant="ghost">
                     <Copy size={22} />
                   </Button>

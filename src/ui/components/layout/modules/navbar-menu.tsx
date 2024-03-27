@@ -37,7 +37,15 @@ export function NavbarMenu(): JSX.Element {
           <NavigationMenuContent className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
             {toolsNavigation.map((toolLink: ITool, index) => (
               <NavigationMenuLink key={index} asChild>
-                <ListMenuItem toolLink={toolLink} />
+                <Link
+                  href={toolLink.href}
+                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent dark:focus:bg-accent/50 focus:text-accent-foreground"
+                >
+                  <h6 className="text-sm font-medium leading-none">{translate(toolLink.title, TOOLS_LANGUAGES)}</h6>
+                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    {translate(toolLink.description, TOOLS_LANGUAGES)}
+                  </p>
+                </Link>
               </NavigationMenuLink>
             ))}
           </NavigationMenuContent>
@@ -50,25 +58,5 @@ export function NavbarMenu(): JSX.Element {
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  );
-}
-
-interface ListMenuItemProps {
-  toolLink: ITool;
-}
-
-export function ListMenuItem({ toolLink }: ListMenuItemProps) {
-  const { translate } = useLanguage();
-
-  return (
-    <Link
-      href={toolLink.href}
-      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-accent/50 hover:text-accent-foreground focus:bg-accent dark:focus:bg-accent/50 focus:text-accent-foreground"
-    >
-      <h6 className="text-sm font-medium leading-none">{translate(toolLink.title, TOOLS_LANGUAGES)}</h6>
-      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-        {translate(toolLink.description, TOOLS_LANGUAGES)}
-      </p>
-    </Link>
   );
 }
