@@ -23,7 +23,7 @@ const config: Config = {
        */
       fontFamily: {
         sora: 'var(--font-sora)',
-        'space-grotesk': 'var(--font-space-grotesk)',
+        amaranth: 'var(--font-amaranth)',
         'ibm-plex-mono': 'var(--font-ibm-plex-mono)',
       },
       backgroundImage: {

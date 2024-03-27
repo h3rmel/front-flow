@@ -1,4 +1,4 @@
-# Atelier
+# FrontFlow
 
 It's a set of front-end tools that aims to help developers create interfaces with more ease and simplicity in their daily lives.
 
@@ -8,7 +8,7 @@ To run the app, you need to execute the following commands:
 
 ```bash
 # Clone the repository
-https://github.com/K4mome/atelier.git
+https://github.com/h3rmel/front-flow.git
 
 # Install the packages
 npm install

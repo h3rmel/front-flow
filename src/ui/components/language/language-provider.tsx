@@ -31,13 +31,13 @@ const LanguageProviderContext = createContext<LanguageProviderState>(initialStat
  *
  * @param {ReactNode} children - The children components.
  * @param {Language} [defaultLanguage='pt-BR'] - The default language.
- * @param {string} [storageKey='atelier-language'] - The key used to store the language in local storage.
+ * @param {string} [storageKey='front-flow-language'] - The key used to store the language in local storage.
  * @returns {JSX.Element} The language provider component.
  */
 export function LanguageProvider({
   children,
   defaultLanguage = 'en-US',
-  storageKey = 'atelier-language',
+  storageKey = 'front-flow-language',
 }: LanguagesProviderProps): JSX.Element {
   const [language, setLanguage] = useState<Language>(defaultLanguage);
 

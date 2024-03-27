@@ -19,8 +19,8 @@ export function Navbar(): JSX.Element {
       <section className="relative container flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <h1 className="text-3xl font-sora font-medium tracking-widest duration-300 hover:text-kamome-green-500">
-            Atelier
+          <h1 className="text-3xl font-sora font-medium tracking-widest duration-300 hover:text-kamome-green-500 -skew-x-[15deg]">
+            FrontFlow
           </h1>
         </Link>
         {/* Navigation Menu */}

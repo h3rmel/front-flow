@@ -45,7 +45,7 @@ export default function Home(): JSX.Element {
           <Button onClick={handleStart} variant="primary">
             {translate('btn_start', HOME_LANGUAGES)}
           </Button>
-          <Link href="https://github.com/K4mome/atelier" target="_blank">
+          <Link href="https://github.com/h3rmel/front-flow" target="_blank">
             <Button variant="outline">
               <GithubLogo size={20} /> GitHub
             </Button>
@@ -81,11 +81,11 @@ export default function Home(): JSX.Element {
         <Question size={32} className="absolute top-4 left-4" />
         <Card className="ml-auto mr-[10%]">
           <CardHeader>
-            <CardTitle>{translate('what_is_atelier', HOME_LANGUAGES)}</CardTitle>
-            <CardDescription>{translate('what_is_atelier_description', HOME_LANGUAGES)}</CardDescription>
+            <CardTitle>{translate('what_is_front_flow', HOME_LANGUAGES)}</CardTitle>
+            <CardDescription>{translate('what_is_front_flow_description', HOME_LANGUAGES)}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-justify">{translate('what_is_atelier_content', HOME_LANGUAGES)}</p>
+            <p className="text-justify">{translate('what_is_front_flow_content', HOME_LANGUAGES)}</p>
           </CardContent>
         </Card>
         <Card className="ml-auto mr-[25%]">

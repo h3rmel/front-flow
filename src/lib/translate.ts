@@ -9,7 +9,7 @@
  * @returns {string} The translated string.
  */
 export function translate(key: string, list: LanguageList): string {
-  const language = localStorage.getItem('atelier-language') as Language;
+  const language = localStorage.getItem('front-flow-language') as Language;
 
   if (!language) return list[key]['pt-BR'];
 

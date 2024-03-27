@@ -1,7 +1,7 @@
 export const HOME_LANGUAGES: LanguageList = {
   front_tools: {
-    'pt-BR': 'Atelier é a Central de Ferramentas Front-end.',
-    'en-US': 'Atelier is the Front-end Tools Central.',
+    'pt-BR': 'FrontFlow é a Central de Ferramentas Front-end.',
+    'en-US': 'FrontFlow is the Front-end Tools Central.',
   },
   all_in_one_place: {
     'pt-BR': 'Tudo em um só lugar!',
@@ -15,15 +15,15 @@ export const HOME_LANGUAGES: LanguageList = {
     'pt-BR': 'Todas aquelas ferramentas que você usa. Agora em um só lugar!',
     'en-US': 'All that tools you use. Now in one place!',
   },
-  what_is_atelier: {
-    'pt-BR': 'O que é o Atelier?',
-    'en-US': 'What is Atelier?',
+  what_is_front_flow: {
+    'pt-BR': 'O que é o FrontFlow?',
+    'en-US': 'What is FrontFlow?',
   },
-  what_is_atelier_description: {
+  what_is_front_flow_description: {
     'pt-BR': 'Uma breve explicação...',
     'en-US': 'A short explanation...',
   },
-  what_is_atelier_content: {
+  what_is_front_flow_content: {
     'pt-BR':
       'É um conjunto de ferramentas específicas para front-end visando auxiliar desenvolvedores a criar interfaces com mais facilidade e simplicidade no seu dia a dia.',
     'en-US':
