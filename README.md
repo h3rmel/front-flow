@@ -1,65 +1,23 @@
 # FrontFlow
 
-It's a set of front-end tools that aims to help developers create interfaces with more ease and simplicity in their daily lives.
+<!-- Badges from: https://github.com/Ileriayo/markdown-badges -->
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 
-## Running the app
+A set of front-end tools that helps developers create interfaces in a more easy and simplistic way in their daily lives.
 
-To run the app, you need to execute the following commands:
+## Table of Contents
 
-```bash
-# Clone the repository
-https://github.com/h3rmel/front-flow.git
+- [💻 Application Overview](docs/application-overview.md)
+- [⚙️ Project Configuration](docs/project-configuration.md)
+- [👁️ Style Guide](docs/style-guide.md)
 
-# Install the packages
-npm install
+## Contributing
 
-# Run the front-end on dev
-npm run dev
-```
+Work In Progress...
 
-If you don't run on any issues, you will see a message like this:
+## License
 
-```bash
-  ▲ Next.js 14.1.4
-   - Local:        http://localhost:3000
-
- ✓ Ready in 1404ms
-```
-
-## Folder Structure 🗄️
-
-```md
-.
-├── .vscode
-├── public
-└── src
-    ├── _data
-    ├── _languages
-    ├── features
-    │   └── ...
-    ├── layouts
-    ├── lib
-    ├── pages
-    ├── types
-    ├── ui
-    │   ├── components
-    │   └── ...
-    ├── app.tsx
-    └── main.tsx
-```
-
-## Tech Stack 🛠️
-
-- React
-- React Router DOM
-- React-hook-form
-  - Zod
-- Phosphor Icons
-- TypeScript
-- TailwindCSS
-  - Shadcn/UI
-  - Postcss
-  - Autoprefixer
-- ESLint
-- Prettier
-- ViteJS
+[MIT](LICENSE)
