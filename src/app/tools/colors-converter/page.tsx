@@ -3,9 +3,11 @@
 // #region Imports
 
 import { useLanguage } from '@/ui/components/language/language-provider';
-import { ColorConverterProvider, ColorsForm } from '@/ui/components/tools/colors-converter';
 
 import { COLORS_CONVERTER_LANGUAGES } from '@/_languages';
+
+import { ColorsForm } from './components';
+import { ColorConverterProvider } from './hooks';
 
 // #endregion
 
