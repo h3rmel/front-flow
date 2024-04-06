@@ -61,6 +61,8 @@ const formSchema = z.object({
 export function ColorsForm(): JSX.Element {
   const [formErrors, setFormErrors] = useState<IFormError[]>([] as IFormError[]);
 
+  // #region Hooks
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -81,6 +83,8 @@ export function ColorsForm(): JSX.Element {
   const { hexToHsl, hexToRgb, rgbToHex, rgbToHsl, hslToHex, hslToRgb } = useColorsConverter();
 
   const { translate } = useLanguage();
+
+  // #endregion
 
   /**
    * Handles the change event of the input fields in the colors form.
