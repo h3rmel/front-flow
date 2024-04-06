@@ -14,7 +14,7 @@ A set of front-end tools that helps developers create interfaces in a more easy 
 - [⚙️ Project Configuration](docs/project-configuration.md)
 - [👁️ Style Guide](docs/style-guide.md)
 - [🗄️ Project Structure](docs/project-structure.md)
-<!-- - []() -->
+- [🧱 Components And Styling](docs/components-and-styling.md)
 
 ## Contributing
 

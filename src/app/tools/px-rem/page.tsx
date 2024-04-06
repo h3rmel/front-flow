@@ -4,12 +4,12 @@
 
 import { ArrowsHorizontal } from '@phosphor-icons/react';
 
+import { PxRemForm, InfoTable } from '@/features/px-rem';
+
 import { useLanguage } from '@/ui/components/language/language-provider';
 
 import { PX_REM_CONVERSION } from '@/_data/px-rem';
 import { PX_REM_LANGUAGES } from '@/_languages';
-
-import { PxRemForm, InfoTable } from './components';
 
 // #endregion
 
