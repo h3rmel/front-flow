@@ -2,8 +2,9 @@
 
 // #region Imports
 
+import { ColorsForm, ColorConverterProvider } from '@/features/colors-converter';
+
 import { useLanguage } from '@/ui/components/language/language-provider';
-import { ColorConverterProvider, ColorsForm } from '@/ui/components/tools/colors-converter';
 
 import { COLORS_CONVERTER_LANGUAGES } from '@/_languages';
 

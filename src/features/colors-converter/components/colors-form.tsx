@@ -10,12 +10,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useDebouncedCallback } from 'use-debounce';
 import { ZodError, z } from 'zod';
 
+import { useColorsConverter } from '@/features/colors-converter';
+
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Card } from '@/ui/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/components/ui/form';
 import { Input } from '@/ui/components/ui/input';
-
-import { useColorsConverter } from '..';
 
 import { COLORS_CONVERTER_LANGUAGES } from '@/_languages';
 
@@ -61,6 +61,8 @@ const formSchema = z.object({
 export function ColorsForm(): JSX.Element {
   const [formErrors, setFormErrors] = useState<IFormError[]>([] as IFormError[]);
 
+  // #region Hooks
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -81,6 +83,8 @@ export function ColorsForm(): JSX.Element {
   const { hexToHsl, hexToRgb, rgbToHex, rgbToHsl, hslToHex, hslToRgb } = useColorsConverter();
 
   const { translate } = useLanguage();
+
+  // #endregion
 
   /**
    * Handles the change event of the input fields in the colors form.

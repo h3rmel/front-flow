@@ -1,65 +1,56 @@
-# FrontFlow
+# FrontFlow 💻
 
-It's a set of front-end tools that aims to help developers create interfaces with more ease and simplicity in their daily lives.
+<!-- Badges from: https://github.com/Ileriayo/markdown-badges -->
+[![License](https://img.shields.io/github/license/k4mome/front-flow?style=for-the-badge)](./LICENSE)
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/home)
 
-## Running the app
+A set of front-end tools that helps developers create interfaces in a more easy and simplistic way in their daily lives.
 
-To run the app, you need to execute the following commands:
+## Table of Contents
 
-```bash
-# Clone the repository
-https://github.com/h3rmel/front-flow.git
+- [💻 Application Overview](docs/application-overview.md)
+- [⚙️ Project Configuration](docs/project-configuration.md)
+- [👁️ Style Guide](docs/style-guide.md)
+- [🗄️ Project Structure](docs/project-structure.md)
+- [🧱 Components And Styling](docs/components-and-styling.md)
+- [🗃️ State Management](docs/state-management.md)
+- [⚠️ Error Handling](docs/error-handling.md)
+- [🚄 Performance](docs/performance.md)
+- [🌐 Deployment](docs/deployment.md)
 
-# Install the packages
-npm install
+## Contributing
 
-# Run the front-end on dev
-npm run dev
-```
+Contributions are always welcome! You can contribute to this project in two ways:
 
-If you don't run on any issues, you will see a message like this:
+### 1. Monetary Help
 
-```bash
-  ▲ Next.js 14.1.4
-   - Local:        http://localhost:3000
+You can contribute by donating any amount to help keep this repository active. The donations will be used to hosting-like things, like domain, more resources to the website and etc.
 
- ✓ Ready in 1404ms
-```
+WIP... (Someday I will put the link here)
 
-## Folder Structure 🗄️
+### 2. Code Help
 
-```md
-.
-├── .vscode
-├── public
-└── src
-    ├── _data
-    ├── _languages
-    ├── features
-    │   └── ...
-    ├── layouts
-    ├── lib
-    ├── pages
-    ├── types
-    ├── ui
-    │   ├── components
-    │   └── ...
-    ├── app.tsx
-    └── main.tsx
-```
+You can contribute by improving the application, with a new feature, bugfix, refac and etc. To this, first you can (and we advise you) to see the following documentations of the project:
 
-## Tech Stack 🛠️
+- [👁️ Style Guide](docs/style-guide.md)
+- [🗄️ Project Structure](docs/project-structure.md)
+- [🧱 Components And Styling](docs/components-and-styling.md)
+- [🗃️ State Management](docs/state-management.md)
+- [⚠️ Error Handling](docs/error-handling.md)
+- [🚄 Performance](docs/performance.md)
 
-- React
-- React Router DOM
-- React-hook-form
-  - Zod
-- Phosphor Icons
-- TypeScript
-- TailwindCSS
-  - Shadcn/UI
-  - Postcss
-  - Autoprefixer
-- ESLint
-- Prettier
-- ViteJS
+With this, you will know how to write the code following the design patterns and other rules defined in this project.
+
+Now, follow this steps:
+
+1. Clone this repository
+2. Create a branch: `git checkout -b your-feature` (Prefer to create branches in a semantic way, like `feat-something-new` or `bugfix-colors-not-converting`)
+3. Make the changes
+4. Test the changes
+5. Push the branch and open a Pull Request
+
+If your code follows all the rules and the changes work well, your Pull Request will be accepted and merged!
+
+## License
+
+[MIT](LICENSE)
