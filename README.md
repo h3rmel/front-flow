@@ -15,10 +15,18 @@ A set of front-end tools that helps developers create interfaces in a more easy 
 - [👁️ Style Guide](docs/style-guide.md)
 - [🗄️ Project Structure](docs/project-structure.md)
 - [🧱 Components And Styling](docs/components-and-styling.md)
+- [🗃️ State Management](docs/state-management.md)
+- [⚠️ Error Handling](docs/error-handling.md)
+- [🚄 Performance](docs/performance.md)
+- [🌐 Deployment](docs/deployment.md)
 
 ## Contributing
 
-Work In Progress...
+Contributions are always welcome! You can contribute to this project in two ways:
+
+### 1.
+
+
 
 ## License
 

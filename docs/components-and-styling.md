@@ -5,7 +5,7 @@
 The project has the following naming definitions for the codebase:
 
 - `kebab-case`: Used for the files in general.
-- `PascalCase`: Used for components in general.
+- `PascalCase`: Used for components in general, also interfaces and types.
 - `camelCase`: Used for variables, functions and hooks.
 - `SCREAMING_SNAKE_CASE`: Used for constants and static data.
 
@@ -53,9 +53,11 @@ export function Component({ ... }: { ... }): JSX.Element {
   useEffect(() => {}, []);
 
   // 3.7 Return
-  return (<main>
-    ...
-  </main>);
+  return (
+    <main>
+      ...
+    </main>
+  );
 }
 ```
 
