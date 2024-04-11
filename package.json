@@ -45,8 +45,7 @@
     "p:format": "prettier --write .",
     "e:check": "eslint . --ext .ts,.tsx",
     "e:lint": "eslint . --ext .ts,.tsx --fix",
-    "prepare": "husky",
-    "validate": "npm run p:format && npm run e:lint"
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^ 3.3.4",
