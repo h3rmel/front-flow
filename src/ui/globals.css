@@ -1,13 +1,12 @@
 @charset "utf-8";
 
-@import "shadcn-ui.css";
+@import 'shadcn-ui.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-
   /* 
     Kamome theme
   */

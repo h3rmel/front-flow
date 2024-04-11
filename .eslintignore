@@ -2,3 +2,9 @@ node_modules/
 build/
 .next/
 src/ui/components/ui/
+docs/
+next-env.d.ts
+*.yaml
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
