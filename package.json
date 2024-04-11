@@ -36,18 +36,6 @@
     "url": "https://gtihub.com/k4mome/front-flow.git"
   },
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*": [
-      "prettier --check .",
-      "eslint . --ext .ts,.tsx",
-      "git add"
-    ]
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
