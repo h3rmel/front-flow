@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "next",
-    "eslint-config-prettier"
-  ],
+  "extends": ["next", "eslint-config-prettier"],
   "settings": {
     "import/resolver": {
       "node": {
