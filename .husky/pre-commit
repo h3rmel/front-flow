@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "\nRunning prettier...\n================"
-npm run p:format
-echo "\nRunning eslint...\n================"
-npm run e:lint
+echo "\nRunning prettier on check mode...\n========================"
+npm run p:check
+echo "\nRunning eslint on check mode...\n========================"
+npm run e:check
