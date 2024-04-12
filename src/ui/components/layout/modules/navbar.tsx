@@ -1,4 +1,4 @@
-// #region Imports
+// #region Import(s)
 
 import Link from 'next/link';
 

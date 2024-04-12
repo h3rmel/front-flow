@@ -26,6 +26,11 @@ export const PX_REM_LANGUAGES: LanguageList = {
     'pt-BR': 'Copiar Valor em REM',
     'en-US': 'Copy value in rem',
   },
+  select_an_option: {
+    'pt-BR': 'Selecione uma opção',
+    'en-US': 'Select an option',
+  },
+
   /**
    * Form validation
    */

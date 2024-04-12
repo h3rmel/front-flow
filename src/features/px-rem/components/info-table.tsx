@@ -1,6 +1,6 @@
 'use client';
 
-// #region Imports
+// #region Import(s)
 
 import { Copy } from '@phosphor-icons/react';
 
@@ -24,6 +24,7 @@ interface InfoTableProps {
     rem: string;
     tailwind: string;
   }[];
+  selectOption: 'gap' | PxRemPaddingType | PxRemMarginType;
 }
 
 /**
@@ -32,7 +33,7 @@ interface InfoTableProps {
  * @param {InfoTableProps} tableContent - the content for the info table
  * @return {JSX.Element} the rendered info table
  */
-export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
+export function InfoTable({ tableContent, selectOption = 'gap' }: InfoTableProps): JSX.Element {
   const { translate } = useLanguage();
 
   /**
@@ -46,8 +47,10 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
   }
 
   return (
-    <Table className="w-auto border">
+    <Table className="w-auto">
+      {/* Caption */}
       <TableCaption>{translate('conversion_table', PX_REM_LANGUAGES)}</TableCaption>
+      {/* Table Head */}
       <TableHeader>
         <TableRow className="rounded-2xl">
           <TableHead>Pixels</TableHead>
@@ -55,6 +58,7 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
           <TableHead>{translate('tailwind_class', PX_REM_LANGUAGES)}</TableHead>
         </TableRow>
       </TableHeader>
+      {/* Table Body */}
       <TableBody>
         {tableContent.map(({ px, rem, tailwind }, index) => (
           <TableRow key={index}>
@@ -65,7 +69,9 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
               <kbd>{rem}</kbd>
             </TableCell>
             <TableCell className="w-full inline-flex items-center justify-between gap-2">
-              <kbd>{tailwind}</kbd>
+              <kbd>
+                {selectOption}-{tailwind}
+              </kbd>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button size="icon" variant="ghost">
@@ -79,7 +85,7 @@ export function InfoTable({ tableContent }: InfoTableProps): JSX.Element {
                   <DropdownMenuItem onClick={() => copySpacingValue(`gap: ${rem}`)}>
                     {translate('copy_rem', PX_REM_LANGUAGES)}
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => copySpacingValue(tailwind)}>
+                  <DropdownMenuItem onClick={() => copySpacingValue(`${selectOption}-${tailwind}`)}>
                     {translate('copy_tailwind', PX_REM_LANGUAGES)}
                   </DropdownMenuItem>
                 </DropdownMenuContent>

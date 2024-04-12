@@ -1,6 +1,6 @@
 'use client';
 
-// #region Imports
+// #region Import(s)
 
 import { ChangeEvent, useState } from 'react';
 import { useForm } from 'react-hook-form';
