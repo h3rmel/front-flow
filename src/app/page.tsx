@@ -7,12 +7,14 @@ import Link from 'next/link';
 
 import { GithubLogo, Question, TextHOne, TextHTwo, Wrench } from '@phosphor-icons/react';
 
+import { HOME_LANGUAGES } from '@/features/home';
+
 import { useLanguage } from '@/ui/components/language/language-provider';
+import { TOOLS_LANGUAGES } from '@/ui/components/layout/languages';
 import { Button, buttonVariants } from '@/ui/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/ui/components/ui/card';
 
-import { toolsContent } from '@/_data/tools';
-import { HOME_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
+import { toolsContent } from '@/data/tools';
 
 // #endregion
 
@@ -36,7 +38,9 @@ export default function Home(): JSX.Element {
       <section className="relative container flex flex-col items-center gap-6 px-16 py-64 border overflow-hidden rounded-t-2xl bg-background bg-oscilate bg-no-repeat bg-center">
         <TextHOne size={32} className="absolute top-4 left-4" />
         <hgroup className="font-sora text-center flex flex-col z-10">
-          <h1 className="text-3xl font-medium leading-[40px] tracking-wide">{translate('front_tools', HOME_LANGUAGES)}</h1>
+          <h1 className="text-3xl font-medium leading-[40px] tracking-wide">
+            {translate('front_tools', HOME_LANGUAGES)}
+          </h1>
           <h2 className="text-3xl font-medium leading-[40px] tracking-wide text-kamome-gray-600 dark:text-kamome-gray-300">
             {translate('all_in_one_place', HOME_LANGUAGES)}
           </h2>

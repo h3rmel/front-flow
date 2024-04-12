@@ -15,7 +15,7 @@ import { Card } from '@/ui/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/components/ui/form';
 import { Input } from '@/ui/components/ui/input';
 
-import { PX_REM_LANGUAGES } from '@/_languages';
+import { PX_REM_LANGUAGES } from '../languages/px-rem.lng';
 
 // #endregion
 
@@ -34,7 +34,7 @@ const formSchema = z.object({
  */
 export function PxRemForm(): JSX.Element {
   const [formErrors, setFormErrors] = useState<IFormError[]>([] as IFormError[]);
-  
+
   // Hooks
   const form = useForm<TypeFormSchema>({
     resolver: zodResolver(formSchema),

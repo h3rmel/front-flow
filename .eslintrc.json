@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "next",
-    "eslint-config-prettier"
-  ],
+  "extends": ["next", "eslint-config-prettier"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -13,9 +10,9 @@
   },
   "plugins": ["import-helpers"],
   "rules": {
-    "spaced-comment": "warn",
+    "spaced-comment": "error",
     "import-helpers/order-imports": [
-      "warn",
+      "error",
       {
         "newlinesBetween": "always", // new line between groups
         "groups": [
@@ -26,7 +23,7 @@
           "/^@/features/",
           "/^@/layouts/",
           "/^@/ui/",
-          "/^@/_/",
+          "/^@/data/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }

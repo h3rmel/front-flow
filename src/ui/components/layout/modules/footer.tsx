@@ -9,7 +9,7 @@ import { GithubLogo } from '@phosphor-icons/react';
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button } from '@/ui/components/ui/button';
 
-import { FOOTER_LANGUAGES } from '@/_languages';
+import { FOOTER_LANGUAGES } from '../languages';
 
 // #endregion
 
@@ -26,13 +26,13 @@ export function Footer(): JSX.Element {
       <section className="container flex items-center justify-between">
         <p>
           {translate('developed_by', FOOTER_LANGUAGES)}{' '}
-          <Link href="https://github.com/h3rmel" target="_blank" className="text-kamome-green-500 hover:underline">
-            H3rmel.{' '}
+          <Link href="https://github.com/k4mome" target="_blank" className="text-kamome-green-500 hover:underline">
+            Kamome.{' '}
           </Link>
           {translate('all_rights_reserved', FOOTER_LANGUAGES)}
         </p>
         <p>
-          <Link href="https://github.com/h3rmel/front-flow" target="_blank">
+          <Link href="https://github.com/k4mome/front-flow" target="_blank">
             <Button variant="ghost" size="icon">
               <GithubLogo size={22} />
             </Button>
