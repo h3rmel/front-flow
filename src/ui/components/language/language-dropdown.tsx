@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from '@/ui/components/ui/dropdown-menu';
 
-import { NAVBAR_LANGUAGES } from '@/_languages';
+import { NAVBAR_LANGUAGES } from '../layout/languages';
 
 // #endregion
 

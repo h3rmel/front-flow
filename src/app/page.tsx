@@ -7,12 +7,14 @@ import Link from 'next/link';
 
 import { GithubLogo, Question, TextHOne, TextHTwo, Wrench } from '@phosphor-icons/react';
 
+import { HOME_LANGUAGES } from '@/features/home';
+
 import { useLanguage } from '@/ui/components/language/language-provider';
+import { TOOLS_LANGUAGES } from '@/ui/components/layout/languages';
 import { Button, buttonVariants } from '@/ui/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/ui/components/ui/card';
 
-import { toolsContent } from '@/_data/tools';
-import { HOME_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
+import { toolsContent } from '@/data/tools';
 
 // #endregion
 
