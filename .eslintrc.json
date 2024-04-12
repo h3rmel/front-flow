@@ -28,6 +28,12 @@
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@/features/*/*"]
+      }
     ]
   }
 }

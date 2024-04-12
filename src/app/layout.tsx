@@ -1,4 +1,4 @@
-// #region Imports
+// #region Import(s)
 
 import { ReactNode } from 'react';
 
