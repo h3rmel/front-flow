@@ -15,7 +15,7 @@ import {
   SelectValue,
 } from '@/ui/components/ui/select';
 
-import { MARGIN_OPTONS, PADDING_OPTIONS, PX_REM_CONVERSION } from '../data/px-rem';
+import { MARGIN_OPTIONS, PADDING_OPTIONS, PX_REM_CONVERSION } from '../data/px-rem';
 import { PX_REM_LANGUAGES } from '../languages/px-rem.lng';
 import { InfoTable } from './info-table';
 
@@ -32,11 +32,11 @@ const SECOND_HALF = PX_REM_CONVERSION.slice(PX_REM_CONVERSION.length / 2, PX_REM
  * @return {JSX.Element} the conversion tables.
  */
 export function ConversionTables(): JSX.Element {
-  const [selectOption, setSelectOption] = useState<'gap' | PxRemPaddingType | PxRemMarginType>('gap');
+  const [selectOption, setSelectOption] = useState<PxRemSelectOption>('gap');
 
   const { translate } = useLanguage();
 
-  function handleChange(value: 'gap' | PxRemPaddingType | PxRemMarginType) {
+  function handleChange(value: PxRemSelectOption) {
     setSelectOption(value);
   }
 
@@ -57,15 +57,15 @@ export function ConversionTables(): JSX.Element {
             {/* Padding */}
             <SelectLabel>Padding</SelectLabel>
             {PADDING_OPTIONS.map((option, index) => (
-              <SelectItem key={index} value={option}>
-                {option}
+              <SelectItem key={index} value={option.key}>
+                {option.key}
               </SelectItem>
             ))}
             {/* Margin */}
             <SelectLabel>Margin</SelectLabel>
-            {MARGIN_OPTONS.map((option, index) => (
-              <SelectItem key={index} value={option}>
-                {option}
+            {MARGIN_OPTIONS.map((option, index) => (
+              <SelectItem key={index} value={option.key}>
+                {option.key}
               </SelectItem>
             ))}
           </SelectGroup>

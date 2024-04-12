@@ -39,6 +39,80 @@ export const PX_REM_CONVERSION: {
   { px: '384px', rem: '24rem', tailwind: '96' },
 ];
 
-export const PADDING_OPTIONS = ['p', 'px', 'py', 'ps', 'pe', 'pt', 'pr', 'pb', 'pl'];
+export const PADDING_OPTIONS = [
+  {
+    key: 'p',
+    value: 'padding',
+  },
+  {
+    key: 'px',
+    value: 'padding-inline',
+  },
+  {
+    key: 'py',
+    value: 'padding-block',
+  },
+  {
+    key: 'ps',
+    value: 'padding-start',
+  },
+  {
+    key: 'pe',
+    value: 'padding-end',
+  },
+  {
+    key: 'pt',
+    value: 'padding-top',
+  },
+  {
+    key: 'pr',
+    value: 'padding-right',
+  },
+  {
+    key: 'pb',
+    value: 'padding-bottom',
+  },
+  {
+    key: 'pl',
+    value: 'padding-left',
+  },
+];
 
-export const MARGIN_OPTONS = ['m', 'mx', 'my', 'ms', 'me', 'mt', 'mr', 'mb', 'ml'];
+export const MARGIN_OPTIONS = [
+  {
+    key: 'm',
+    value: 'margin',
+  },
+  {
+    key: 'mx',
+    value: 'margin-inline',
+  },
+  {
+    key: 'my',
+    value: 'margin-block',
+  },
+  {
+    key: 'ms',
+    value: 'margin-start',
+  },
+  {
+    key: 'me',
+    value: 'margin-end',
+  },
+  {
+    key: 'mt',
+    value: 'margin-top',
+  },
+  {
+    key: 'mr',
+    value: 'margin-right',
+  },
+  {
+    key: 'mb',
+    value: 'margin-bottom',
+  },
+  {
+    key: 'ml',
+    value: 'margin-left',
+  },
+];
