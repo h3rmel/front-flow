@@ -4,12 +4,13 @@
 
 import { useTheme } from 'next-themes';
 
-import { Moon, Sun } from 'lucide-react';
+// import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from '@phosphor-icons/react';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button } from '@/ui/components/ui/button';
 
-import { NAVBAR_LANGUAGES } from '@/_languages';
+import { NAVBAR_LANGUAGES } from '../layout/languages';
 
 // #endregion
 
@@ -29,10 +30,9 @@ export function ThemeToggle(): JSX.Element {
 
   return (
     <Button variant="outline" size="icon" onClick={handleToggleTheme}>
-      {theme === 'light' && (
+      {theme === 'light' ? (
         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      )}
-      {theme === 'dark' && (
+      ) : (
         <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       )}
       <span className="sr-only">{translate('toggle_theme', NAVBAR_LANGUAGES)}</span>

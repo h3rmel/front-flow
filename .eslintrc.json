@@ -23,7 +23,7 @@
           "/^@/features/",
           "/^@/layouts/",
           "/^@/ui/",
-          "/^@/_/",
+          "/^@/data/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }

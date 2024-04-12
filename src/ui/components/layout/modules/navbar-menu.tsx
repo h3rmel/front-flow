@@ -15,8 +15,9 @@ import {
   navigationMenuTriggerStyle,
 } from '@/ui/components/ui/navigation-menu';
 
-import { toolsNavigation } from '@/_data/tools';
-import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from '@/_languages';
+import { toolsNavigation } from '@/data/tools';
+
+import { NAVBAR_LANGUAGES, TOOLS_LANGUAGES } from '../languages';
 
 // #endregion
 

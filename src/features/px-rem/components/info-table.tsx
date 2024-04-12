@@ -14,7 +14,7 @@ import {
 } from '@/ui/components/ui/dropdown-menu';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
 
-import { PX_REM_LANGUAGES } from '@/_languages';
+import { PX_REM_LANGUAGES } from '../languages/px-rem.lng';
 
 // #endregion
 
