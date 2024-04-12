@@ -1,15 +1,14 @@
-'use client';
-
 // #region Imports
 
-import { ArrowsHorizontal } from '@phosphor-icons/react';
+import { Metadata } from 'next';
 
 import { PxRemForm, ConversionTable } from '@/features/px-rem';
 
 // #endregion
 
-// TODO: Work on a way to export metadata. (remove the use client from the top.)
-// export const metadata: Metadata = {}
+export const metadata: Metadata = {
+  title: 'PX/REM',
+};
 
 /**
  * Function to render the PX to REM page content.
@@ -21,9 +20,7 @@ export default function Page(): JSX.Element {
     <main>
       <section className="relative container flex flex-col items-center justify-center gap-8 p-16">
         {/* Title */}
-        <h1 className="inline-flex items-center gap-2 text-2xl">
-          PX <ArrowsHorizontal size={28} /> REM
-        </h1>
+        <h1 className="inline-flex items-center gap-2 text-2xl">PX / REM</h1>
         {/* PX <-> Rem form */}
         <PxRemForm />
         {/* Conversion Tables */}
