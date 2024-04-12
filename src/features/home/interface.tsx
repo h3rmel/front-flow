@@ -45,7 +45,7 @@ export function HomeInterface(): JSX.Element {
           <Button onClick={handleStart} variant="primary">
             {translate('btn_start', HOME_LANGUAGES)}
           </Button>
-          <Link href="https://github.com/h3rmel/front-flow" target="_blank">
+          <Link href="https://github.com/k4mome/front-flow" target="_blank">
             <Button variant="outline">
               <GithubLogo size={20} /> GitHub
             </Button>
