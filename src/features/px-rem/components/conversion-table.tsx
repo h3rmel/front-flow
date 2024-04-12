@@ -1,6 +1,6 @@
 'use client';
 
-// #region Imports
+// #region Import(s)
 
 import { useState } from 'react';
 
@@ -21,11 +21,17 @@ import { InfoTable } from './info-table';
 
 // #endregion
 
-// Constants
+// Constant(s)
 const FIRST_HALF = PX_REM_CONVERSION.slice(0, PX_REM_CONVERSION.length / 2);
 const SECOND_HALF = PX_REM_CONVERSION.slice(PX_REM_CONVERSION.length / 2, PX_REM_CONVERSION.length);
 
-export function ConversionTable() {
+/**
+ * Renders the conversion tables for the given select option.
+ *
+ * @param {InfoTableProps} tableContent - the content for the info table
+ * @return {JSX.Element} the conversion tables.
+ */
+export function ConversionTables(): JSX.Element {
   const [selectOption, setSelectOption] = useState<'gap' | PxRemPaddingType | PxRemMarginType>('gap');
 
   const { translate } = useLanguage();

@@ -1,23 +1,31 @@
 # 🗄️ Project Structure
 
-Most of the code lives in the `src` folder and looks like this:
+The project code looks like this:
 
 ```bash
-src
+.
 |
-+-- _data             # Data application (JSON, CSV files, etc.)
++-- .husky          # Git Hooks & Commit Lint configurations
 |
-+-- _langauges        # Internationalization (i18n)
++-- .vscode         # Some VSCode enforce settings
 |
-+-- app               # The App Router from NextJS
++-- docs            # The project's documentation
 |
-+-- lib               # Different Libraries preconfiguration
-|
-+-- types             # Base types used across the application
-|
-+-- ui                # All user interface code related (React components)
-|
-+-- utils             # Utility functions
++-- src             # The project's codebase
+    |
+    +-- app         # The App Router from NextJS
+    |
+    +-- data        # Data application (JSON, CSV files, etc.)
+    |
+    +-- features    # Features of the project separate by folders
+    |
+    +-- lib         # Internal/External Libraries preconfiguration
+    |
+    +-- types       # Base types used across the application
+    |
+    +-- ui          # All user interface code related (React components)
+    |
+    +-- utils       # Utility functions
 ```
 
 In order to scale the application in the easiest and most maintainable way, keep most of the code inside the `feature` folder, which should contain different feature-based things. Every 'feature folder' should contain domain specific code for a given feature. This will allow you to keep the functionalities scoped to a feature and not mix its declarations with shared things.
@@ -36,20 +44,24 @@ src/feature/colors-converter
 +-- utils             # Utils scoped to the feature
 |
 +-- index.ts          # Entry point of the feature
+|
++-- interface.tsx     # The interface of the feature (works for the `page.tsx` component of the route)
+|
++-- skeleton.tsx      # The skeleton interface of the feature (works for the `loading.tsx` component of the route)
 ```
 
-In this case, you use the `index.ts` to export all its content to make it more organized to import and use it.
+In this case, you use the `index.ts` to export the `interface.tsx` and what it is necessary to run the feature. (like providers and etc.) 
 
 With this, you should import stuff from other features only by using:
 
 ```tsx
-import { ColorsButton } from '@/features/colors-converter';
+import { ColorsConverterInterface } from '@/features/colors-converter';
 ```
 
-and ont
+and not
 
 ```tsx
-import { ColorsButton } from '@/features/colors-converter/components/colors-button.tsx';
+import { ColorsConverterInterface } from '@/features/colors-converter/interface.tsx';
 ```
 
 This can also be configured in the ESLint configuration to disallow the later import by the following rule:

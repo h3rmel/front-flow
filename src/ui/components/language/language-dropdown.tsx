@@ -1,6 +1,6 @@
 'use client';
 
-// #region Imports
+// #region Import(s)
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 import { Button } from '@/ui/components/ui/button';

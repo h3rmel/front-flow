@@ -1,30 +1,14 @@
-'use client';
+// #region Import(s)
 
-// #region Imports
+import { Metadata } from 'next';
 
-import { ColorsForm, ColorConverterProvider, COLORS_CONVERTER_LANGUAGES } from '@/features/colors-converter';
-
-import { useLanguage } from '@/ui/components/language/language-provider';
+import { ColorConverterProvider, ColorsConverterInterface } from '@/features/colors-converter';
 
 // #endregion
 
-// TODO: Work on a way to export metadata. (remove the use client from the top.)
-// export const metadata: Metadata = {}
-
-function ColorsConverterInterface(): JSX.Element {
-  const { translate } = useLanguage();
-
-  return (
-    <main>
-      <section className="relative container flex flex-col items-center justify-center gap-8 p-16">
-        {/* Title */}
-        <h1 className="text-2xl text-center">{translate('colors_converter', COLORS_CONVERTER_LANGUAGES)}</h1>
-        {/* Colors Form */}
-        <ColorsForm />
-      </section>
-    </main>
-  );
-}
+export const metadata: Metadata = {
+  title: 'Colors Converter',
+};
 
 export default function Page(): JSX.Element {
   return (

@@ -1,6 +1,6 @@
 'use client';
 
-// #region Imports
+// #region Import(s)
 
 import { Copy } from '@phosphor-icons/react';
 

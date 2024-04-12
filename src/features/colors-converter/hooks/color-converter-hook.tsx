@@ -1,6 +1,9 @@
 'use client';
 
+// Import(s)
 import { ReactNode, createContext, useContext } from 'react';
+
+// #region Interfaces
 
 interface ColorConverterProviderProps {
   children: ReactNode;
@@ -15,6 +18,10 @@ interface ColorConverterState {
   hslToRgb: (h: number, s: number, l: number) => IRGB;
 }
 
+// #endregion
+
+// #region Constant(s)
+
 const initialState: ColorConverterState = {
   hexToRgb: () => ({ r: 0, g: 0, b: 0 }),
   hexToHsl: () => ({ h: 0, s: 0, l: 0 }),
@@ -25,6 +32,8 @@ const initialState: ColorConverterState = {
 };
 
 const ColorConverterContext = createContext<ColorConverterState>(initialState);
+
+// #endregion
 
 /**
  * Provides a context for converting colors between different formats.

@@ -1,2 +1,3 @@
-// Languages
-export { HOME_LANGUAGES } from './languages/home.lng';
+// Interface(s)
+export { HomeInterface } from './interface';
+export { HomeInterfaceSkeleton } from './skeleton';
