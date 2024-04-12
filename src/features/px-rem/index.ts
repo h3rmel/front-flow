@@ -1,5 +1,5 @@
 // Components
-export { InfoTable } from './components/info-table';
+export { ConversionTable } from './components/conversion-table';
 export { PxRemForm } from './components/px-rem-form';
 
 // Data
