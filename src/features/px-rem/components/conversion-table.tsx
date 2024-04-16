@@ -5,6 +5,7 @@
 import { useState } from 'react';
 
 import { useLanguage } from '@/ui/components/language/language-provider';
+import { Label } from '@/ui/components/ui/label';
 import {
   Select,
   SelectContent,
@@ -45,32 +46,35 @@ export function ConversionTables(): JSX.Element {
       {/* Title */}
       <h2 className="text-2xl">{translate('conversion_table', PX_REM_LANGUAGES)}</h2>
       {/* SelectOption State */}
-      <Select defaultValue={selectOption} onValueChange={handleChange}>
-        <SelectTrigger className="max-w-[180px]">
-          <SelectValue placeholder={translate('select_an_option', PX_REM_LANGUAGES)} />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            {/* Gap */}
-            <SelectLabel>Gap</SelectLabel>
-            <SelectItem value="gap">gap</SelectItem>
-            {/* Padding */}
-            <SelectLabel>Padding</SelectLabel>
-            {PADDING_OPTIONS.map((option, index) => (
-              <SelectItem key={index} value={option.key}>
-                {option.key}
-              </SelectItem>
-            ))}
-            {/* Margin */}
-            <SelectLabel>Margin</SelectLabel>
-            {MARGIN_OPTIONS.map((option, index) => (
-              <SelectItem key={index} value={option.key}>
-                {option.key}
-              </SelectItem>
-            ))}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+      <div className="flex flex-col items-center justify-start gap-2 min-w-[180px]">
+        <Label>{translate('css_key', PX_REM_LANGUAGES)}</Label>
+        <Select defaultValue={selectOption} onValueChange={handleChange}>
+          <SelectTrigger className="max-w-[180px]">
+            <SelectValue placeholder={translate('select_an_option', PX_REM_LANGUAGES)} />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              {/* Gap */}
+              <SelectLabel>Gap</SelectLabel>
+              <SelectItem value="gap">gap</SelectItem>
+              {/* Padding */}
+              <SelectLabel>Padding</SelectLabel>
+              {PADDING_OPTIONS.map((option, index) => (
+                <SelectItem key={index} value={option.key}>
+                  {option.key}
+                </SelectItem>
+              ))}
+              {/* Margin */}
+              <SelectLabel>Margin</SelectLabel>
+              {MARGIN_OPTIONS.map((option, index) => (
+                <SelectItem key={index} value={option.key}>
+                  {option.key}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>{' '}
+      </div>
       {/* Tables */}
       <div className="w-full flex items-center justify-around">
         <InfoTable selectOption={selectOption} tableContent={FIRST_HALF} />
