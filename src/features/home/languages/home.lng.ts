@@ -27,7 +27,7 @@ export const HOME_LANGUAGES: LanguageList = {
     'pt-BR':
       'É um conjunto de ferramentas específicas para front-end visando auxiliar desenvolvedores a criar interfaces com mais facilidade e simplicidade no seu dia a dia.',
     'en-US':
-      "It's a set of front-end tools that aims to help developers create interfaces with more ease and simplicity in their daily lives.",
+      "It's a set of front-end tools that helps developers create interfaces in a greater ease and simplistic way in their daily lives.",
   },
   how_it_works: {
     'pt-BR': 'Como funciona?',
