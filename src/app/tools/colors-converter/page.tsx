@@ -2,7 +2,8 @@
 
 import { Metadata } from 'next';
 
-import { ColorConverterProvider, ColorsConverterInterface } from '@/features/colors-converter';
+import { ColorsConverterInterface } from './_components/interface';
+import { ColorConverterProvider } from './_hooks/color-converter-hook';
 
 // #endregion
 

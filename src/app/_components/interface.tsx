@@ -14,7 +14,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/ui/
 
 import { toolsContent } from '@/data/tools';
 
-import { HOME_LANGUAGES } from './languages/home.lng';
+import { HOME_LANGUAGES } from '../_languages/home.lng';
 
 // #endregion
 

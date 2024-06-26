@@ -1,5 +1,5 @@
-import { PADDING_OPTIONS } from '../data/px-rem';
-import { MARGIN_OPTIONS } from '../data/px-rem';
+import { PADDING_OPTIONS } from '../_data/px-rem';
+import { MARGIN_OPTIONS } from '../_data/px-rem';
 
 export function mapSelectOption(selectOption: PxRemSelectOption) {
   const paddingOption = PADDING_OPTIONS.find((option) => option.key === selectOption);
