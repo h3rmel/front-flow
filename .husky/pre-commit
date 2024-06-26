@@ -1,7 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "\nRunning prettier on check mode...\n========================"
-npm run p:check
-echo "\nRunning eslint on check mode...\n========================"
-npm run e:check
+npx --no-install commitlint --edit "$1"
