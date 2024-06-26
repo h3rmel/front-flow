@@ -4,8 +4,8 @@
 
 import { useLanguage } from '@/ui/components/language/language-provider';
 
-import { ColorsForm } from './components/colors-form';
-import { COLORS_CONVERTER_LANGUAGES } from './languages/colors-converter.lng';
+import { COLORS_CONVERTER_LANGUAGES } from '../_languages/colors-converter.lng';
+import { ColorsForm } from './colors-form';
 
 // #endregion
 

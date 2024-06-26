@@ -16,8 +16,8 @@ import {
   SelectValue,
 } from '@/ui/components/ui/select';
 
-import { MARGIN_OPTIONS, PADDING_OPTIONS, PX_REM_CONVERSION } from '../data/px-rem';
-import { PX_REM_LANGUAGES } from '../languages/px-rem.lng';
+import { MARGIN_OPTIONS, PADDING_OPTIONS, PX_REM_CONVERSION } from '../_data/px-rem';
+import { PX_REM_LANGUAGES } from '../_languages/px-rem.lng';
 import { InfoTable } from './info-table';
 
 // #endregion

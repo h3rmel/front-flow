@@ -15,8 +15,8 @@ import { Card } from '@/ui/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/components/ui/form';
 import { Input } from '@/ui/components/ui/input';
 
-import { useColorsConverter } from '../hooks/color-converter-hook';
-import { COLORS_CONVERTER_LANGUAGES } from '../languages/colors-converter.lng';
+import { useColorsConverter } from '../_hooks/color-converter-hook';
+import { COLORS_CONVERTER_LANGUAGES } from '../_languages/colors-converter.lng';
 
 // #endregion
 

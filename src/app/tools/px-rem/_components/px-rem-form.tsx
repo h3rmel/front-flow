@@ -15,7 +15,7 @@ import { Card } from '@/ui/components/ui/card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/ui/components/ui/form';
 import { Input } from '@/ui/components/ui/input';
 
-import { PX_REM_LANGUAGES } from '../languages/px-rem.lng';
+import { PX_REM_LANGUAGES } from '../_languages/px-rem.lng';
 
 // #endregion
 

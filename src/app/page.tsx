@@ -1,7 +1,7 @@
 // Import(s)
 import { Metadata } from 'next';
 
-import { HomeInterface } from '@/features/home';
+import { HomeInterface } from './_components/interface';
 
 export const metadata: Metadata = {
   title: 'Home | FrontFlow',

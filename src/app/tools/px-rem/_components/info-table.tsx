@@ -14,8 +14,8 @@ import {
 } from '@/ui/components/ui/dropdown-menu';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/ui/components/ui/table';
 
-import { PX_REM_LANGUAGES } from '../languages/px-rem.lng';
-import { mapSelectOption } from '../utils/mapSelectOption';
+import { PX_REM_LANGUAGES } from '../_languages/px-rem.lng';
+import { mapSelectOption } from '../_utils/mapSelectOption';
 
 // #endregion
 
