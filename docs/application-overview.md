@@ -37,6 +37,6 @@ Build the application, returning the files in the `/build` folder.
 
 Starts the build provided by `pnpm run build` command in a server locally.
 
-#### `pnpm run lint`
+#### `pnpm run n:lint`
 
 Lint the code using the rules written in `.eslintrc.json` and `.prettierrc` files.
